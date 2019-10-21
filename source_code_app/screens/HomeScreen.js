@@ -22,7 +22,7 @@ export default function HomeScreen() {
           <Image
             source={
               __DEV__
-                ? require('../assets/images/FBLA-Logo.png')
+                ? require('../assets/images/furry.png')
                 : require('../assets/images/robot-prod.png')
             }
             style={styles.welcomeImage}
@@ -36,6 +36,9 @@ export default function HomeScreen() {
           <Text style={styles.getStartedText}>
             Wow.
           </Text>
+		  <Text style={styles.getStartedText}>
+			Evan was here.
+		  </Text>
         </View>
 
       </ScrollView>
