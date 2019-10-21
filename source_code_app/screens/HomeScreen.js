@@ -16,7 +16,7 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <ScrollView
-        style={styles.container}
+        style={styles.container,{backgroundColor: global.color1}}
         contentContainerStyle={styles.contentContainer}>
         <View style={styles.welcomeContainer}>
           <Image
