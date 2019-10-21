@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import { ExpoConfigView } from '@expo/samples';
 import { Switch, Platform, StatusBar, StyleSheet, View, ScrollView, Text } from 'react-native';
-import '/Users/Ethan/Desktop/Projects/FBLA_app/source_code_app/global.js';
 
 function updateColors(){
   global.color1 = ((global.darkMode == false) ? '#FFF' : '#000');
