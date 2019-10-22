@@ -13,10 +13,10 @@ export default function SettingsScreen() {
   return (
     <ScrollView style={styles.container,{backgroundColor: global.color1},{textColor: global.textColor}}>
       <ExpoConfigView style={{backgroundColor: global.color1}}/>
-      <View style={{backgroundColor: global.color2}}>
+      <View style={{backgroundColor: global.color2, textColor: global.textColor}}>
         <Text>{"\n"}</Text>
         <View style={{flexDirection: "row"}}>
-          <Text style={styles.left}>{"   "}Dark Mode {"                                       "}</Text>
+          <Text style={styles.left,{color: global.textColor}}>{"   "}Dark Mode {"                                       "}</Text>
           <Switch
               onValueChange={() => setSVal(((sVal == false) ? true : false))}
               onChange={() => {global.darkMode=!sVal; updateColors();}}
