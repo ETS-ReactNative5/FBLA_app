@@ -2,17 +2,11 @@ import React, {useState} from 'react';
 import { ExpoConfigView } from '@expo/samples';
 import { Switch, Platform, StatusBar, StyleSheet, View, ScrollView, Text } from 'react-native';
 
-function updateColors(){
-  global.color1 = ((global.darkMode == false) ? '#FFF' : '#000');
-  global.color2 = ((global.darkMode == false) ? '#FBFBFB' : '#2B2B2B');
-  global.textColor = ((global.darkMode == false) ? '#000' : '#FFF');
-}
-
 export default function SettingsScreen() {
   const [sVal, setSVal] = useState(false);
   return (
     <ScrollView style={styles.container,{backgroundColor: global.color1},{textColor: global.textColor}}>
-      <ExpoConfigView style={{backgroundColor: global.color1}}/>
+      {/*<ExpoConfigView style={{backgroundColor: global.color1}} />*/}
       <View style={{backgroundColor: global.color2, textColor: global.textColor}}>
         <Text>{"\n"}</Text>
         <View style={{flexDirection: "row"}}>

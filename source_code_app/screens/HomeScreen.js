@@ -1,5 +1,5 @@
 import * as WebBrowser from 'expo-web-browser';
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Image,
   Platform,
@@ -8,11 +8,13 @@ import {
   Text,
   TouchableOpacity,
   View,
+  Button,
 } from 'react-native';
 
 import { MonoText } from '../components/StyledText';
 
 export default function HomeScreen() {
+  const [outputText, setOutputText] = useState('This is a test. Repeat: this is a test.\n');
   return (
     <View style={styles.container}>
       <ScrollView
@@ -40,6 +42,8 @@ export default function HomeScreen() {
 			Evan was here.
 		  </Text>
         </View>
+        <Text style={{textAlign: 'center',color: global.textColor}}>{outputText}</Text>
+        <Button title="Change Text" onPress={() => setOutputText( ((outputText == 'This is a test. Repeat: this is a test.\n') ? 'Or is it?\n' : 'This is a test. Repeat: this is a test.\n') )} />
 
       </ScrollView>
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ScrollView, StyleSheet, Text, Button } from 'react-native';
+import { ScrollView, StyleSheet, Text, Button, View } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 
 export default function LinksScreen() {
