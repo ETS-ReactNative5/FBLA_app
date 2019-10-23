@@ -2,7 +2,6 @@ import React from 'react';
 import { Platform } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator, createDrawerNavigator } from 'react-navigation';
 
-import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import SettingsScreen from '../screens/SettingsScreen';
@@ -12,21 +11,16 @@ const config = Platform.select({
   default: {},
 });
 
+//https://infinitered.github.io/ionicons-version-3-search/
 const HomeStack = createStackNavigator(
   {
     Home: HomeScreen,
   },
   config
 );
-
-//https://infinitered.github.io/ionicons-version-3-search/
 HomeStack.navigationOptions = {
-  tabBarLabel: 'Home',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-home' : 'md-home'} />
-  ),
+  drawerLabel: 'Home',
 };
-
 HomeStack.path = '';
 
 const ProfileStack = createStackNavigator(
@@ -35,14 +29,9 @@ const ProfileStack = createStackNavigator(
   },
   config
 );
-
 ProfileStack.navigationOptions = {
-  tabBarLabel: 'Profile',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-person' : 'md-person'} />
-  ),
+  drawerLabel: 'Profile',
 };
-
 ProfileStack.path = '';
 
 const SettingsStack = createStackNavigator(
@@ -51,22 +40,17 @@ const SettingsStack = createStackNavigator(
   },
   config
 );
-
 SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
-  ),
+  drawerLabel: 'Settings',
 };
-
 SettingsStack.path = '';
 
-const tabNavigator = createBottomTabNavigator({
+const drawerNavigator = createDrawerNavigator({
   HomeStack,
   ProfileStack,
   SettingsStack,
 });
 
-tabNavigator.path = '';
+drawerNavigator.path = '';
 
-export default tabNavigator;
+export default drawerNavigator;
