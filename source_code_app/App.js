@@ -1,14 +1,17 @@
 import { AppLoading } from 'expo';
 import { Asset } from 'expo-asset';
 import * as Font from 'expo-font';
-import React, { useState } from 'react';
+import React, { useState, setState } from 'react';
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import SwitchExample from './components/Switch.js'
 import AppNavigator from './navigation/AppNavigator';
 import './global.js';
+import { Appearance, AppearanceProvider, useColorScheme } from 'react-native-appearance';
+const styles = StyleSheet.create(require('./stylesheet'));
 
 export default function App(props) {
+
   const [isLoadingComplete, setLoadingComplete] = useState(false);
 
   if (!isLoadingComplete && !props.skipLoadingScreen) {
@@ -20,12 +23,14 @@ export default function App(props) {
       />
     );
   } else {
-    updateColors();
+    global.darkMode = Appearance.getColorScheme()=='light' ? false : true;
     return (
-      <View style={styles.container}>
-        {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
-        <AppNavigator style={{backgroundColor: global.color1}}  />
-      </View>
+      <AppearanceProvider>
+        <View style={styles.container}>
+          {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
+          <AppNavigator theme={global.theme}  />
+        </View>
+      </AppearanceProvider>
     );
   }
 }
@@ -37,28 +42,16 @@ async function loadResourcesAsync() {
       require('./assets/images/icon.png'),
     ]),
     Font.loadAsync({
-      // This is the font that we are using for our tab bar
       ...Ionicons.font,
-      // We include SpaceMono because we use it in HomeScreen.js. Feel free to
-      // remove this if you are not using it in your apppp
       'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf'),
     }),
   ]);
 }
 
 function handleLoadingError(error) {
-  // In this case, you might want to report the error to your error reporting
-  // service, for example Sentry
   console.warn(error);
 }
 
 function handleFinishLoading(setLoadingComplete) {
   setLoadingComplete(true);
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: ((global.darkMode == false) ? '#FFF' : '#000'),
-  },
-});
