@@ -11,7 +11,6 @@ import { Appearance, AppearanceProvider, useColorScheme } from 'react-native-app
 const styles = StyleSheet.create(require('./stylesheet'));
 
 export default function App(props) {
-
   const [isLoadingComplete, setLoadingComplete] = useState(false);
 
   if (!isLoadingComplete && !props.skipLoadingScreen) {
