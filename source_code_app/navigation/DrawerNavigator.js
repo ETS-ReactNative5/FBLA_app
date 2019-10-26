@@ -7,8 +7,6 @@ import HomeScreen from '../screens/HomeScreen';
 import EventsScreen from '../screens/EventsScreen';
 import MoreScreen from '../screens/MoreScreen';
 
-//https://infinitered.github.io/ionicons-version-3-search/
-
 const config = Platform.select({
   web: { headerMode: 'screen' },
   default: {},
@@ -21,6 +19,7 @@ const HomeStack = createStackNavigator(
   config
 );
 
+//https://infinitered.github.io/ionicons-version-3-search/
 HomeStack.navigationOptions = {
   tabBarLabel: 'Home',
   tabBarIcon: ({ focused }) => (
@@ -40,7 +39,7 @@ const EventsStack = createStackNavigator(
 EventsStack.navigationOptions = {
   tabBarLabel: 'Events',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-calendar' : 'md-calendar'} />
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-person' : 'md-person'} />
   ),
 };
 
@@ -56,18 +55,18 @@ const MoreStack = createStackNavigator(
 MoreStack.navigationOptions = {
   tabBarLabel: 'More',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-more' : 'md-more'} />
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
   ),
 };
 
 MoreStack.path = '';
 
-const tabNavigator = createBottomTabNavigator({
+const DrawerNavigator = createBottomDrawerNavigator({
   HomeStack,
   EventsStack,
   MoreStack,
 });
 
-tabNavigator.path = '';
+DrawerNavigator.path = '';
 
-export default tabNavigator;
+export default DrawerNavigator;

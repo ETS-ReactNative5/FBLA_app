@@ -1,13 +1,12 @@
 {
   "expo": {
-    "name": "a",
-    "slug": "a",
+    "name": "Ethan and Evan's FBLA App",
+    "slug": "ee-fbla-app",
     "privacy": "public",
     "sdkVersion": "35.0.0",
     "platforms": [
       "ios",
-      "android",
-      "web"
+      "android"
     ],
     "version": "1.0.0",
     "orientation": "portrait",
@@ -24,7 +23,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
-    }
+      "supportsTablet": false
+    },
+    "description": ""
   }
 }
