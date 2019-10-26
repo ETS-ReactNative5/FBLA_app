@@ -2,55 +2,71 @@ import React from 'react';
 import { Platform } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator, createDrawerNavigator } from 'react-navigation';
 
+import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
-import ProfileScreen from '../screens/ProfileScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import EventsScreen from '../screens/EventsScreen';
+import MoreScreen from '../screens/MoreScreen';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
   default: {},
 });
 
-//https://infinitered.github.io/ionicons-version-3-search/
 const HomeStack = createStackNavigator(
   {
     Home: HomeScreen,
   },
   config
 );
+
+//https://infinitered.github.io/ionicons-version-3-search/
 HomeStack.navigationOptions = {
-  drawerLabel: 'Home',
+  tabBarLabel: 'Home',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-home' : 'md-home'} />
+  ),
 };
+
 HomeStack.path = '';
 
-const ProfileStack = createStackNavigator(
+const EventsStack = createStackNavigator(
   {
-    Links: ProfileScreen,
+    Links: EventsScreen,
   },
   config
 );
-ProfileStack.navigationOptions = {
-  drawerLabel: 'Profile',
-};
-ProfileStack.path = '';
 
-const SettingsStack = createStackNavigator(
+EventsStack.navigationOptions = {
+  tabBarLabel: 'Events',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-person' : 'md-person'} />
+  ),
+};
+
+EventsStack.path = '';
+
+const MoreStack = createStackNavigator(
   {
-    Settings: SettingsScreen,
+    Settings: MoreScreen,
   },
   config
 );
-SettingsStack.navigationOptions = {
-  drawerLabel: 'Settings',
-};
-SettingsStack.path = '';
 
-const drawerNavigator = createDrawerNavigator({
+MoreStack.navigationOptions = {
+  tabBarLabel: 'More',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
+  ),
+};
+
+MoreStack.path = '';
+
+const DrawerNavigator = createBottomDrawerNavigator({
   HomeStack,
-  ProfileStack,
-  SettingsStack,
+  EventsStack,
+  MoreStack,
 });
 
-drawerNavigator.path = '';
+DrawerNavigator.path = '';
 
-export default drawerNavigator;
+export default DrawerNavigator;

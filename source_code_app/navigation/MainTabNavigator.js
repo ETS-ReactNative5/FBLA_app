@@ -4,8 +4,10 @@ import { createStackNavigator, createBottomTabNavigator, createDrawerNavigator }
 
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
-import ProfileScreen from '../screens/ProfileScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import EventsScreen from '../screens/EventsScreen';
+import MoreScreen from '../screens/MoreScreen';
+
+//https://infinitered.github.io/ionicons-version-3-search/
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -19,7 +21,6 @@ const HomeStack = createStackNavigator(
   config
 );
 
-//https://infinitered.github.io/ionicons-version-3-search/
 HomeStack.navigationOptions = {
   tabBarLabel: 'Home',
   tabBarIcon: ({ focused }) => (
@@ -29,42 +30,42 @@ HomeStack.navigationOptions = {
 
 HomeStack.path = '';
 
-const ProfileStack = createStackNavigator(
+const EventsStack = createStackNavigator(
   {
-    Links: ProfileScreen,
+    Links: EventsScreen,
   },
   config
 );
 
-ProfileStack.navigationOptions = {
-  tabBarLabel: 'Profile',
+EventsStack.navigationOptions = {
+  tabBarLabel: 'Events',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-person' : 'md-person'} />
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-calendar' : 'md-calendar'} />
   ),
 };
 
-ProfileStack.path = '';
+EventsStack.path = '';
 
-const SettingsStack = createStackNavigator(
+const MoreStack = createStackNavigator(
   {
-    Settings: SettingsScreen,
+    Settings: MoreScreen,
   },
   config
 );
 
-SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
+MoreStack.navigationOptions = {
+  tabBarLabel: 'More',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
   ),
 };
 
-SettingsStack.path = '';
+MoreStack.path = '';
 
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
-  ProfileStack,
-  SettingsStack,
+  EventsStack,
+  MoreStack,
 });
 
 tabNavigator.path = '';
