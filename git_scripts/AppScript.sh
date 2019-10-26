@@ -10,7 +10,9 @@ function dirChange {
   fi
 }
 
-function join { local IFS="$1"; shift; echo "$*"; }
+function join {
+  local IFS="$1"; shift; echo "$*";
+}
 
 while :
 do
