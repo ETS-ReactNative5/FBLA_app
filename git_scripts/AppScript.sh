@@ -35,16 +35,16 @@ do
   then
     dirChange
     git checkout master
-    git pull origin master
+    git pull origin master --allow-unrelated-histories
     git merge EthanBranch
-    git push origin master
+    git push origin master --allow-unrelated-histories
     git checkout EthanBranch
   fi
 
   if test "$option" == "c"
   then
     dirChange
-    git pull origin master
+    git pull origin master --allow-unrelated-histories
   fi
 
   if test "$option" == "d"
