@@ -37,7 +37,7 @@ do
     git checkout master
     git pull origin master --allow-unrelated-histories
     git merge EthanBranch
-    git push origin master --allow-unrelated-histories
+    git push origin master
     git checkout EthanBranch
   fi
 
