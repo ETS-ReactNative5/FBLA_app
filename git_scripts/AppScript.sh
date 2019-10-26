@@ -1,6 +1,6 @@
 #!/bin/bash
 
-projectDir="../$(dirname "$0")"
+projectDir="../$(cd -P -- "$(dirname -- "$0")" && pwd -P)"
 
 function join { local IFS="$1"; shift; echo "$*"; }
 
