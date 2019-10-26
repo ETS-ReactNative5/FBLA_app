@@ -1,6 +1,14 @@
 #!/bin/bash
 
-projectDir="../$(cd -P -- "$(dirname -- "$0")" && pwd -P)"
+function dirChange {
+  projectDir="$(cd -P -- "$(dirname -- "$0")" && pwd -P)"
+  cd $projectDir
+  cd ../
+  if test "$1" == "run"
+  then
+    cd ./source_code_app
+  fi
+}
 
 function join { local IFS="$1"; shift; echo "$*"; }
 
@@ -12,7 +20,7 @@ do
 
   if test "$option" == "a"
   then
-    cd $projectDir
+    dirChange
     echo "What is your commit message?"
     read -a commitM
     git checkout EthanBranch
@@ -23,7 +31,7 @@ do
 
   if test "$option" == "b"
   then
-    cd $projectDir
+    dirChange
     git checkout master
     git pull origin master
     git merge EthanBranch
@@ -33,14 +41,13 @@ do
 
   if test "$option" == "c"
   then
-    cd $projectDir
+    dirChange
     git pull origin master
   fi
 
   if test "$option" == "d"
   then
-    cd $projectDir
-    cd ./source_code_app
+    dirChange run
     expo start
   fi
 
