@@ -5,13 +5,20 @@ const styles = StyleSheet.create(require('../stylesheet'));
 
 
 export default class LinksScreen extends React.Component {
+  constructor(props) {
+       super(props);
+       this.state = {
+           darkTheme: false
+       };
+       this.toggleTheme = this.toggleTheme.bind(this);
+   }
+   toggleTheme() {
+       this.setState({darkTheme: !this.state.darkTheme})
+   };
+
   render() {
     return (
       <ScrollView style={styles.profileContainer,{backgroundColor: global.color1}}>
-        {/*
-        <Text style={{textAlign: 'center',color: global.textColor}}>{outputText}</Text>
-        <Button title="Change Text" onPress={() => setOutputText( ((outputText == 'This is a test. Repeat: this is a test.\n') ? 'Or is it?\n' : 'This is a test. Repeat: this is a test.\n') )} />
-        */}
       </ScrollView>
     );
   }
