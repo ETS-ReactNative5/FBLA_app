@@ -62,10 +62,27 @@ MoreStack.navigationOptions = {
 
 MoreStack.path = '';
 
+const LicenseStack = createStackNavigator(
+  {
+    Settings: LicenseScreen,
+  },
+  config
+);
+
+LicenseStack.navigationOptions = {
+  tabBarLabel: 'License Creap',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-more' : 'md-more'} />
+  ),
+};
+
+MoreStack.path = '';
+
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
   EventsStack,
   MoreStack,
+  LicenseStack,
 });
 
 tabNavigator.path = '';
