@@ -41,7 +41,7 @@ SOFTWARE.
     }
   }
   
-  MoreScreen.navigationOptions = {
+  LicenseScreen.navigationOptions = {
     title: 'Licensing Information',
   };
   

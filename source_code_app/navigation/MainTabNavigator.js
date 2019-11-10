@@ -6,6 +6,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import EventsScreen from '../screens/EventsScreen';
 import MoreScreen from '../screens/MoreScreen';
+import LicenseScreen from '../screens/LicenseInfo';
 
 //https://infinitered.github.io/ionicons-version-3-search/
 
@@ -72,11 +73,11 @@ const LicenseStack = createStackNavigator(
 LicenseStack.navigationOptions = {
   tabBarLabel: 'License Creap',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-more' : 'md-more'} />
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-more' : 'logo-playstation'} />
   ),
 };
 
-MoreStack.path = '';
+LicenseStack.path = '';
 
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
