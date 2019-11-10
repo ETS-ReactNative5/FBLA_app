@@ -27,6 +27,11 @@ export default class HomeScreen extends React.Component {
             <Text style={styles.getStartedText}>This is an app that does stuff.</Text>
             <Text style={styles.getStartedText}>Wow.</Text>
           </View>
+          <Button
+            title="useless purple button"
+            color="#841584"
+            accessibilityLabel="purple button has no job"
+          />
 
         </ScrollView>
       </View>
