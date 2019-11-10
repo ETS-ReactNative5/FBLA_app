@@ -6,7 +6,7 @@ function dirChange {
   cd ../
   if test "$1" == "run"
   then
-    cd ./source_code_app
+    cd ../source_code_app
   fi
 }
 
