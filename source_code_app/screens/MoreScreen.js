@@ -14,6 +14,7 @@ export default class MoreScreen extends React.Component {
   render() {
     return (
       <ScrollView style={styles.container,{textAlign: 'left'}}>
+        <Text style={styles.getStartedText}>This is an app that does stuff.</Text>
       </ScrollView>
     );
   }
