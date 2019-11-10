@@ -61,7 +61,7 @@ MoreStack.navigationOptions = {
 
 MoreStack.path = '';
 
-const DrawerNavigator = createBottomDrawerNavigator({
+const DrawerNavigator = createDrawerNavigator({
   HomeStack,
   EventsStack,
   MoreStack,

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { ExpoConfigView } from '@expo/samples';
-import { Switch, Platform, StatusBar, StyleSheet, View, ScrollView, Text } from 'react-native';
+import { Switch, Platform, StatusBar, StyleSheet, View, ScrollView, Text, Button } from 'react-native';
 import { Appearance, AppearanceProvider, useColorScheme } from 'react-native-appearance';
 const styles = StyleSheet.create(require('../stylesheet'));
 
@@ -19,7 +19,11 @@ export default class MoreScreen extends React.Component {
     );
   }
 }
-
+<Button
+title="View License Information"
+color="#007ce1"
+accessibilityLabel="Views License Information on the license information page."
+/>
 MoreScreen.navigationOptions = {
   title: 'More',
 };

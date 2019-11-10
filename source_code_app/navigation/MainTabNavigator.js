@@ -79,6 +79,7 @@ LicenseStack.navigationOptions = {
 
 LicenseStack.path = '';
 
+
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
   EventsStack,
