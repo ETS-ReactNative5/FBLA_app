@@ -14,7 +14,7 @@ export default class LicenseScreen extends React.Component {
         <View style={styles.container,{textAlign: 'left'}}>
             <Text style={styles.licenseText}>
                 <Text style={{textAlign: 'center'}}>
-                    MIT License{"\n"}
+                    MIT License{"\n"} 
                     Copyright (©) 2019 Ethan127, WackyWolff
                 </Text>
                 {"\n\n"}

@@ -73,7 +73,7 @@ const LicenseStack = createStackNavigator(
 LicenseStack.navigationOptions = {
   tabBarLabel: 'License Creap',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'file-text' : 'file-text'} />
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'text' : 'text'} />
   ),
 };
 
