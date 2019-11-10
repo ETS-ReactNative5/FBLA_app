@@ -9,15 +9,13 @@ export default class LicenseScreen extends React.Component {
       super(props);
     }
   
-    state = {mode: false,};
-  
     render() {
       return (
         <ScrollView style={styles.container,{textAlign: 'left'}}>
             <Text style={styles.licenseText}>
                 MIT License
                 Copyright (c) 2019 Ethan127, WackyWolff
-
+                
                 Permission is hereby granted, free of charge, to any person obtaining a copy
                 of this software and associated documentation files (the "Software"), to deal
                 in the Software without restriction, including without limitation the rights

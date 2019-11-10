@@ -66,6 +66,10 @@ module.exports = {
     color: 'rgba(96,100,109, 1)',
     lineHeight: 24,
     textAlign: 'left',
+    marginTop: 5,
+    marginLeft: 5,
+    marginRight: 5,
+    marginBottom: 5,
   },
   tabBarInfoContainer: {
     position: 'absolute',
