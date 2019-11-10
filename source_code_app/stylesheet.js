@@ -43,6 +43,7 @@ module.exports = {
     alignItems: 'center',
     marginHorizontal: 50,
   },
+  
   homeScreenFilename: {
     marginVertical: 7,
   },
@@ -59,6 +60,12 @@ module.exports = {
     color: 'rgba(96,100,109, 1)',
     lineHeight: 24,
     textAlign: 'center',
+  },
+  licenseText: {
+    fontSize: 15,
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: 24,
+    textAlign: 'left',
   },
   tabBarInfoContainer: {
     position: 'absolute',
