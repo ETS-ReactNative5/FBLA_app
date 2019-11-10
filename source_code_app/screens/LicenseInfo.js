@@ -11,11 +11,11 @@ export default class LicenseScreen extends React.Component {
   
     render() {
       return (
-        <View style={styles.container,{textAlign: 'left'}}>
+        <ScrollView style={styles.container,{textAlign: 'left'}}>
             <Text style={styles.licenseText}>
                 <Text style={{textAlign: 'center'}}>
                     MIT License{"\n"} 
-                    Copyright (©) 2019 Ethan127, WackyWolff
+                    Copyright © 2019 Ethan127, WackyWolff
                 </Text>
                 {"\n\n"}
                 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,7 +36,7 @@ export default class LicenseScreen extends React.Component {
                 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
                 SOFTWARE.
             </Text>
-        </View>
+        </ScrollView>
       );
     }
   }

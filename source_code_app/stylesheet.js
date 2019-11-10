@@ -62,7 +62,7 @@ module.exports = {
     textAlign: 'center',
   },
   licenseText: {
-    fontSize: 12,
+    fontSize: 15,
     color: 'rgba(96,100,109, 1)',
     lineHeight: 24,
     textAlign: 'left',
