@@ -6,4 +6,4 @@ We used a mobile app development framework developed by Facebook called React Na
 
 This app should work on both iOS and Android, although it was designed for iOS so it may run more smoothly and look slightly better on iPhones than Android devices. However, this app is perfectly capable of running on both platforms.
 
-This app also has the ability to adapt to the color scheme of the phone it's being run on (i.e. dark mode or light mode), but a reopening of the app is required for the changes to take effect.
+This app also has the ability to adapt to the color scheme of the device it's being run on (i.e. dark mode or light mode), but a reopening of the app is required for the changes to take effect.
