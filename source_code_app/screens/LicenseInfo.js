@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, {useState, Icon} from 'react';
 import { ExpoConfigView } from '@expo/samples';
-import { Switch, Platform, StatusBar, StyleSheet, View, ScrollView, Text } from 'react-native';
+import { Switch, Platform, StatusBar, StyleSheet, View, ScrollView, Text, Button } from 'react-native';
+import { HeaderBackButton } from "react-navigation-stack";
 import { Appearance, AppearanceProvider, useColorScheme } from 'react-native-appearance';
 const styles = StyleSheet.create(require('../stylesheet'));
 
@@ -8,7 +9,19 @@ export default class LicenseScreen extends React.Component {
     constructor(props) {
       super(props);
     }
-  
+
+    static navigationOptions = ({ navigation }) => {
+      return {
+        title: 'License',
+        headerLeft: (
+          <HeaderBackButton
+            onPress={() => navigation.navigate('More')}
+            title="Back"
+          />
+        ),
+      };
+    }
+
     render() {
       return (
         <ScrollView style={styles.container,{textAlign: 'left'}}>
@@ -41,7 +54,14 @@ export default class LicenseScreen extends React.Component {
     }
   }
   
-  LicenseScreen.navigationOptions = {
-    title: 'Licensing Information',
-  };
+  /*LicenseScreen.navigationOptions = {
+    title: 'License',
+    headerLeft: (
+      <Button
+        onPress={() => this.props.navigation.goBack()}
+        title="Back"
+        color="#fff"
+      />
+    ),
+  };*/
   

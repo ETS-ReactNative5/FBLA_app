@@ -33,7 +33,7 @@ HomeStack.path = '';
 
 const EventsStack = createStackNavigator(
   {
-    Links: EventsScreen,
+    Events: EventsScreen,
   },
   config
 );
@@ -49,7 +49,7 @@ EventsStack.path = '';
 
 const MoreStack = createStackNavigator(
   {
-    Settings: MoreScreen,
+    More: MoreScreen,
   },
   config
 );
@@ -65,13 +65,13 @@ MoreStack.path = '';
 
 const LicenseStack = createStackNavigator(
   {
-    Settings: LicenseScreen,
+    License: LicenseScreen,
   },
   config
 );
 
 LicenseStack.navigationOptions = {
-  tabBarLabel: 'License Creap',
+  tabBarLabel: 'License',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-document' : 'md-document'} />
   ),
@@ -84,7 +84,7 @@ const tabNavigator = createBottomTabNavigator({
   HomeStack,
   EventsStack,
   MoreStack,
-  LicenseStack,
+  //LicenseStack,
 });
 
 tabNavigator.path = '';

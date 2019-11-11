@@ -1,19 +1,35 @@
 import React from 'react';
-import { createAppContainer, createSwitchNavigator, createStackNavigator } from 'react-navigation';
+import { createAppContainer, createSwitchNavigator, createStackNavigator, createDrawerNavigator } from 'react-navigation';
 import { AppearanceProvider, useColorScheme } from 'react-native-appearance';
+import { HeaderBackButton } from 'react-native';
 
 import MainTabNavigator from './MainTabNavigator';
-import DrawerNavigator from './DrawerNavigator';
+MainTabNavigator.navigationOptions={
+  header: null,
+};
 
-export default createAppContainer(
-  createStackNavigator({
-    //Read more at https://reactnavigation.org/docs/en/auth-flow.html
-    Main: {
-      navigationOptions: {
-        header: null,
-      },
-      screen: MainTabNavigator
-    },
-
-  })
+/*====================================================================================*/
+import LicenseScreen from '../screens/LicenseInfo';
+const LicenseStack = createStackNavigator(
+  {
+    License: LicenseScreen,
+  },
 );
+LicenseStack.navigationOptions = {
+  tabBarLabel: 'License',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-document' : 'md-document'} />
+  ),
+};
+LicenseStack.path = '';
+/*====================================================================================*/
+
+/*====================================================================================*/
+export default createAppContainer(
+  createDrawerNavigator(
+    {
+      Main: MainTabNavigator,
+      License: LicenseStack,
+    }),
+);
+/*====================================================================================*/
