@@ -6,6 +6,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import EventsScreen from '../screens/EventsScreen';
 import MoreScreen from '../screens/MoreScreen';
+import SettingsScreen from '../screens/SettingsScreen';
 import LicenseScreen from '../screens/LicenseInfo';
 
 //https://infinitered.github.io/ionicons-version-3-search/
@@ -15,6 +16,7 @@ const config = Platform.select({
   default: {},
 });
 
+/*====================================================================================*/
 const HomeStack = createStackNavigator(
   {
     Home: HomeScreen,
@@ -30,7 +32,9 @@ HomeStack.navigationOptions = {
 };
 
 HomeStack.path = '';
+/*====================================================================================*/
 
+/*====================================================================================*/
 const EventsStack = createStackNavigator(
   {
     Events: EventsScreen,
@@ -46,7 +50,9 @@ EventsStack.navigationOptions = {
 };
 
 EventsStack.path = '';
+/*====================================================================================*/
 
+/*====================================================================================*/
 const MoreStack = createStackNavigator(
   {
     More: MoreScreen,
@@ -62,29 +68,31 @@ MoreStack.navigationOptions = {
 };
 
 MoreStack.path = '';
+/*====================================================================================*/
 
-const LicenseStack = createStackNavigator(
+/*====================================================================================*/
+const SettingsStack = createStackNavigator(
   {
-    License: LicenseScreen,
+    Settings: SettingsScreen,
   },
   config
 );
 
-LicenseStack.navigationOptions = {
-  tabBarLabel: 'License',
+SettingsStack.navigationOptions = {
+  tabBarLabel: 'Settings',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-document' : 'md-document'} />
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-settings' : 'md-settings'} />
   ),
 };
 
-LicenseStack.path = '';
-
+SettingsStack.path = '';
+/*====================================================================================*/
 
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
   EventsStack,
+  SettingsStack,
   MoreStack,
-  //LicenseStack,
 });
 
 tabNavigator.path = '';

@@ -1,4 +1,4 @@
-import { AppLoading } from 'expo';
+import { AppLoading, AuthSession } from 'expo'; 
 import { Asset } from 'expo-asset';
 import * as Font from 'expo-font';
 import React, { useState, setState, Component } from 'react';
@@ -10,6 +10,7 @@ import { createAppContainer, createSwitchNavigator, createStackNavigator } from 
 import './global.js';
 import { Appearance, AppearanceProvider, useColorScheme } from 'react-native-appearance';
 const styles = StyleSheet.create(require('./stylesheet'));
+
 
 export default class App extends Component {
   render(){
@@ -41,11 +42,9 @@ async function loadResourcesAsync() {
     }),
   ]);
 }
-
 function handleLoadingError(error) {
   console.warn(error);
 }
-
 function handleFinishLoading(setLoadingComplete) {
   setLoadingComplete(true);
 }

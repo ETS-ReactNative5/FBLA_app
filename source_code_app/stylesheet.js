@@ -2,6 +2,7 @@ import { Platform } from 'react-native';
 
 module.exports = {
   container: {
+    paddingTop: 10,
     flex: 1,
     backgroundColor: global.color1,
   },
@@ -57,7 +58,7 @@ module.exports = {
   },
   getStartedText: {
     fontSize: 17,
-    color: ((global.darkMode == false) ? 'rgba(96,100,109, 1)' : '#FFF'),
+    color: 'rgba(96,100,109, 1)',
     lineHeight: 24,
     textAlign: 'center',
   },

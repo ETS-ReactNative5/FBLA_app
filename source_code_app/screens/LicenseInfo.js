@@ -10,18 +10,6 @@ export default class LicenseScreen extends React.Component {
       super(props);
     }
 
-    static navigationOptions = ({ navigation }) => {
-      return {
-        title: 'License',
-        headerLeft: (
-          <HeaderBackButton
-            onPress={() => navigation.navigate('More')}
-            title="Back"
-          />
-        ),
-      };
-    }
-
     render() {
       return (
         <ScrollView style={styles.container,{textAlign: 'left'}}>
@@ -54,3 +42,17 @@ export default class LicenseScreen extends React.Component {
     }
   }
   
+  LicenseScreen.navigationOptions = ({ navigation }) => {
+    return {
+      title: 'License',
+      header: null,
+    };
+  }
+
+  /*headerLeft: (
+        <HeaderBackButton
+          onPress={() => navigation.navigate('More')}
+          title="Back"
+        />
+      ),
+  */

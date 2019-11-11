@@ -1,12 +1,13 @@
 import React from 'react';
 import { createAppContainer, createSwitchNavigator, createStackNavigator, createDrawerNavigator } from 'react-navigation';
 import { AppearanceProvider, useColorScheme } from 'react-native-appearance';
-import { HeaderBackButton } from 'react-native';
+import { HeaderBackButton, ActivityIndicator, AsyncStorage, StatusBar, } from 'react-native';
 
 import MainTabNavigator from './MainTabNavigator';
 MainTabNavigator.navigationOptions={
   header: null,
 };
+
 
 /*====================================================================================*/
 import LicenseScreen from '../screens/LicenseInfo';
@@ -25,11 +26,34 @@ LicenseStack.path = '';
 /*====================================================================================*/
 
 /*====================================================================================*/
-export default createAppContainer(
-  createDrawerNavigator(
+const AppStack = createStackNavigator(
+  {
+    Main: MainTabNavigator,
+    License: LicenseStack,
+  }
+);
+import LoginScreen from '../screens/LoginScreen';
+import LoginScreenLoading from '../screens/LoginScreenLoading';
+const AuthStack = createStackNavigator({ SignIn: LoginScreen });
+/*====================================================================================*/
+
+/*====================================================================================*/
+export default createAppContainer(createSwitchNavigator(
+  {
+    AuthLoading: LoginScreenLoading,
+    App: AppStack,
+    Auth: AuthStack,
+  },
+  {
+    initialRouteName: 'AuthLoading',
+  }
+));
+
+/*export default createAppContainer(
+  createStackNavigator(
     {
       Main: MainTabNavigator,
       License: LicenseStack,
     }),
-);
+);*/
 /*====================================================================================*/

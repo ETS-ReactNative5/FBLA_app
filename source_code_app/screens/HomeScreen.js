@@ -1,6 +1,6 @@
 import * as WebBrowser from 'expo-web-browser';
 import React, { useState } from 'react';
-import { Image, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View, Button, }from 'react-native';
+import { Image, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View, Button, AsyncStorage, }from 'react-native';
 import { MonoText } from '../components/StyledText';
 const styles = StyleSheet.create(require('../stylesheet'));
 import { Appearance, AppearanceProvider, useColorScheme } from 'react-native-appearance';
@@ -11,7 +11,7 @@ export default class HomeScreen extends React.Component {
     const { navigation } = this.props;
     return (
       <View style={styles.container}>
-        <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+        <View style={styles.container} contentContainerStyle={styles.contentContainer}>
 
           <View style={styles.welcomeContainer}>
             <Image source={require('../assets/images/FBLA-Logo.png')} style={styles.welcomeImage} />
@@ -22,7 +22,7 @@ export default class HomeScreen extends React.Component {
             <Text style={styles.getStartedText}>Wow.</Text>
           </View>
         
-        </ScrollView>
+        </View>
       </View>
     );
   }
