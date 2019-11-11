@@ -57,7 +57,7 @@ module.exports = {
   },
   getStartedText: {
     fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
+    color: ((global.darkMode == false) ? 'rgba(96,100,109, 1)' : '#FFF'),
     lineHeight: 24,
     textAlign: 'center',
   },
