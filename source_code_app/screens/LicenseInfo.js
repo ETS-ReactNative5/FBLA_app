@@ -54,14 +54,3 @@ export default class LicenseScreen extends React.Component {
     }
   }
   
-  /*LicenseScreen.navigationOptions = {
-    title: 'License',
-    headerLeft: (
-      <Button
-        onPress={() => this.props.navigation.goBack()}
-        title="Back"
-        color="#fff"
-      />
-    ),
-  };*/
-  
