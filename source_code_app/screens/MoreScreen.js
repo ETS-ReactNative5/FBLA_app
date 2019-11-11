@@ -22,6 +22,12 @@ export default class MoreScreen extends React.Component {
           color="#007ce1"
           accessibilityLabel="Views License Information on the license information page."
         />
+        <Button
+          onPress={() => navigate('Settings') }
+          title="Settings"
+          color="#007ce1"
+          accessibilityLabel="Edit App Settings."
+        />
       </ScrollView>
     );
   }
