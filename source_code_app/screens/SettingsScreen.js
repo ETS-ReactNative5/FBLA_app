@@ -17,56 +17,56 @@ export default class MoreScreen extends React.Component {
 
         <View style={{backgroundColor: global.color2}}>
           <Text>{"\n"}</Text>
-            <View style={{flexDirection: "row",}}>
-              <Text>{"   "}</Text>
-              <Image
-                style={{width: 50, height: 50}}
-                source={require('../assets/images/furry.png')}
-              />
-              <Button title="                                     Sign Out" onPress={this._signOutAsync} />
-            </View>
+          <View style={{flexDirection: "row", justifyContent: 'center', alignItems: 'center' }}>
+            <Text>{"   "}</Text>
+            <Image
+              style={{width: 50, height: 50}}
+              source={require('../assets/images/furry.png')}
+            />
+            <Button title="                                     Sign Out" onPress={this._signOutAsync} />
+          </View>
           <Text>{"\n"}</Text>
         </View> 
 
         <View style={{backgroundColor: global.color3}}>
           <Text>{"\n"}</Text>
-            <View style={{flexDirection: "row"}}>
-              <Text style={styles.left,{color: global.textColor}}>{"    "}Dark Mode {"                                       "}</Text>
-              <Switch
-                onValueChange={() => this.setState({mode: ((this.state.mode == false) ? true : false),})}
-                onChange={() => {global.darkMode=!this.state.mode; updateColors(); this.setState({ mode: this.mode });}}
-                value={global.darkMode}
-                ios_backgroundColor="white"
-              />
-            </View>
+          <View style={{flexDirection: "row", justifyContent: 'center', alignItems: 'center' }}>
+            <Text style={styles.left,{color: global.textColor}}>{"    "}Dark Mode {"                                       "}</Text>
+            <Switch
+              onValueChange={() => this.setState({mode: ((this.state.mode == false) ? true : false),})}
+              onChange={() => {global.darkMode=!this.state.mode; updateColors(); this.setState({ mode: this.mode });}}
+              value={global.darkMode}
+              ios_backgroundColor="white"
+            />
+          </View>
           <Text>{"\n"}</Text>
         </View>
 
         <View style={{backgroundColor: global.color2}}>
           <Text>{"\n"}</Text>
-            <View style={{flexDirection: "row"}}>
-              <Text style={styles.left,{color: global.textColor}}>{"    "}Dark Mode {"                                       "}</Text>
-              <Switch
-                onValueChange={() => this.setState({mode: ((this.state.mode == false) ? true : false),})}
-                onChange={() => {global.darkMode=!this.state.mode; updateColors(); this.setState({ mode: this.mode });}}
-                value={global.darkMode}
-                ios_backgroundColor="white"
-              />
-            </View>
+          <View style={{flexDirection: "row", justifyContent: 'center', alignItems: 'center' }}>
+            <Text style={styles.left,{color: global.textColor}}>{"    "}Dark Mode {"                                       "}</Text>
+            <Switch
+              onValueChange={() => this.setState({mode: ((this.state.mode == false) ? true : false),})}
+              onChange={() => {global.darkMode=!this.state.mode; updateColors(); this.setState({ mode: this.mode });}}
+              value={global.darkMode}
+              ios_backgroundColor="white"
+            />
+          </View>
           <Text>{"\n"}</Text>
         </View>
 
         <View style={{backgroundColor: global.color3}}>
           <Text>{"\n"}</Text>
-            <View style={{flexDirection: "row"}}>
-              <Text style={styles.left,{color: global.textColor}}>{"    "}Dark Mode {"                                       "}</Text>
-              <Switch
-                onValueChange={() => this.setState({mode: ((this.state.mode == false) ? true : false),})}
-                onChange={() => {global.darkMode=!this.state.mode; updateColors(); this.setState({ mode: this.mode });}}
-                value={global.darkMode}
-                ios_backgroundColor="white"
-              />
-            </View>
+          <View style={{flexDirection: "row", justifyContent: 'center', alignItems: 'center' }}>
+            <Text style={styles.left,{color: global.textColor}}>{"    "}Dark Mode {"                                       "}</Text>
+            <Switch
+              onValueChange={() => this.setState({mode: ((this.state.mode == false) ? true : false),})}
+              onChange={() => {global.darkMode=!this.state.mode; updateColors(); this.setState({ mode: this.mode });}}
+              value={global.darkMode}
+              ios_backgroundColor="white"
+            />
+          </View>
           <Text>{"\n"}</Text>
         </View>
         
