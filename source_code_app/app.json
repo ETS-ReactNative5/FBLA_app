@@ -23,7 +23,11 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.ethanandevan.fblaapp",
       "supportsTablet": false
+    },
+    "android": {
+      "package": "com.ethanandevan.fblaapp"
     },
     "description": ""
   }
