@@ -19,7 +19,7 @@ export default class MoreScreen extends React.Component {
           <View style={{justifyContent: 'center', alignItems: 'center' }}>
             <Image
               style={{width: 50, height: 50}}
-              source={require('../assets/images/furry.png')}
+              source={require('../assets/images/profile.png')}
             />
             <Text style={styles.left,{color: global.textColor, fontWeight: 'bold'}}>{global.username}</Text>
             <Button title="Sign Out" onPress={this._signOutAsync} />
