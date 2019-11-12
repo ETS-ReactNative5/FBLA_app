@@ -34,6 +34,13 @@ loginFormTextInput: {
   marginBottom: 5,
 
 },
+welcomeImage: {
+  width: 100,
+  height: 80,
+  resizeMode: 'contain',
+  marginTop: 3,
+  marginLeft: -10,
+},
 loginButton: {
   backgroundColor: '#3897f1',
   borderRadius: 5,

@@ -16,16 +16,14 @@ export default class MoreScreen extends React.Component {
       <ScrollView style={styles.container,{textAlign: 'left'}}>
 
         <View style={{backgroundColor: global.color2}}>
-          <Text>{"\n"}</Text>
-          <View style={{flexDirection: "row", justifyContent: 'center', alignItems: 'center' }}>
-            <Text>{"   "}</Text>
+          <View style={{justifyContent: 'center', alignItems: 'center' }}>
             <Image
               style={{width: 50, height: 50}}
               source={require('../assets/images/furry.png')}
             />
-            <Button title="                                     Sign Out" onPress={this._signOutAsync} />
+            <Text style={styles.left,{color: global.textColor, fontWeight: 'bold'}}>{global.username}</Text>
+            <Button title="Sign Out" onPress={this._signOutAsync} />
           </View>
-          <Text>{"\n"}</Text>
         </View> 
 
         <View style={{backgroundColor: global.color3}}>
