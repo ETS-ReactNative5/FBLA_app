@@ -24,7 +24,7 @@
     ],
     "ios": {
       "bundleIdentifier": "com.ethanandevan.fblaapp",
-      "supportsTablet": false
+      "supportsTablet": true
     },
     "android": {
       "package": "com.ethanandevan.fblaapp"
