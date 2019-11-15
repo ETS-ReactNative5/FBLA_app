@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { ExpoConfigView } from '@expo/samples';
-import { Switch, Platform, StatusBar, StyleSheet, View, ScrollView, Text, Button, AsyncStorage, Image } from 'react-native';
+import { Switch, Platform, StatusBar, StyleSheet, View, ScrollView, Text, Button, AsyncStorage, Image, NativeModules } from 'react-native';
 import { Appearance, AppearanceProvider, useColorScheme } from 'react-native-appearance';
 const styles = StyleSheet.create(require('../stylesheet'));
 
@@ -9,11 +9,11 @@ export default class MoreScreen extends React.Component {
     super(props);
   }
 
-  state = {mode: false,};
+  state = {darkModeState: false,refresh: false};
 
   render() {
     return (
-      <ScrollView style={styles.container,{textAlign: 'left'}}>
+      <ScrollView style={styles.container,{textAlign: 'left', backgroundColor: global.color1}}>
 
         <View style={{backgroundColor: global.color2}}>
           <View style={{justifyContent: 'center', alignItems: 'center' }}>
@@ -31,8 +31,11 @@ export default class MoreScreen extends React.Component {
           <View style={{flexDirection: "row", justifyContent: 'center', alignItems: 'center' }}>
             <Text style={styles.left,{color: global.textColor}}>{"    "}Dark Mode {"                                       "}</Text>
             <Switch
-              onValueChange={() => this.setState({mode: ((this.state.mode == false) ? true : false),})}
-              onChange={() => {global.darkMode=!this.state.mode; updateColors(); this.setState({ mode: this.mode });}}
+              onValueChange={() => {
+                this.setState({darkModeState: ((this.state.darkModeState == false) ? true : false)});
+                global.darkMode=this.state.darkModeState;
+                updateColors();
+              }}
               value={global.darkMode}
               ios_backgroundColor="white"
             />
@@ -43,25 +46,13 @@ export default class MoreScreen extends React.Component {
         <View style={{backgroundColor: global.color2}}>
           <Text>{"\n"}</Text>
           <View style={{flexDirection: "row", justifyContent: 'center', alignItems: 'center' }}>
-            <Text style={styles.left,{color: global.textColor}}>{"    "}Dark Mode {"                                       "}</Text>
+            <Text style={styles.left,{color: global.textColor}}>{"    "}Refresh App {"                                       "}</Text>
             <Switch
-              onValueChange={() => this.setState({mode: ((this.state.mode == false) ? true : false),})}
-              onChange={() => {global.darkMode=!this.state.mode; updateColors(); this.setState({ mode: this.mode });}}
-              value={global.darkMode}
-              ios_backgroundColor="white"
-            />
-          </View>
-          <Text>{"\n"}</Text>
-        </View>
-
-        <View style={{backgroundColor: global.color3}}>
-          <Text>{"\n"}</Text>
-          <View style={{flexDirection: "row", justifyContent: 'center', alignItems: 'center' }}>
-            <Text style={styles.left,{color: global.textColor}}>{"    "}Dark Mode {"                                       "}</Text>
-            <Switch
-              onValueChange={() => this.setState({mode: ((this.state.mode == false) ? true : false),})}
-              onChange={() => {global.darkMode=!this.state.mode; updateColors(); this.setState({ mode: this.mode });}}
-              value={global.darkMode}
+              onValueChange={() => {
+                this.setState({refresh: ((this.state.refresh == false) ? true : false)});
+                NativeModules.DevSettings.reload();
+              }}
+              value={this.state.refresh}
               ios_backgroundColor="white"
             />
           </View>

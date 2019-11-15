@@ -48,12 +48,4 @@ export default createAppContainer(createSwitchNavigator(
     initialRouteName: 'AuthLoading',
   }
 ));
-
-/*export default createAppContainer(
-  createStackNavigator(
-    {
-      Main: MainTabNavigator,
-      License: LicenseStack,
-    }),
-);*/
 /*====================================================================================*/

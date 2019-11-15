@@ -2,7 +2,7 @@ import { Platform } from 'react-native';
 
 module.exports = {
   container: {
-    paddingTop: 10,
+    paddingTop: 0,
     flex: 1,
     backgroundColor: global.color1,
   },

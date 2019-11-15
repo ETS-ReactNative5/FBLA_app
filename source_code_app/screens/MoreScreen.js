@@ -14,8 +14,7 @@ export default class MoreScreen extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     return (
-      <ScrollView style={styles.container,{textAlign: 'left'}}>
-        <Text style={styles.getStartedText}>This is an app that does stuff.</Text>
+      <ScrollView style={styles.container,{textAlign: 'left', backgroundColor: global.color1}}>
         <Button
           onPress={() => navigate('License') }
           title="View License Information"

@@ -41,7 +41,7 @@ export default class LoginScreen extends React.Component {
               <Image source={require('../assets/images/FBLA-Logo.png')} style={styles.welcomeImage} />
             </View>
             <TextInput value={this.state.user} onChangeText={(user) => {this.setState({user}); global.username=this.state.user;}} placeholder="Username" placeholderColor="#c4c3cb" style={styles.loginFormTextInput} />
-            <TextInput value={this.state.pass} onChangeText={(pass) => {this.setState({pass}); global.password=(this.state.pass != null) ? this.state.pass : 'abc';}} placeholder="Password" placeholderColor="#c4c3cb" style={styles.loginFormTextInput} secureTextEntry={true}/>
+            <TextInput value={this.state.pass} onChangeText={(pass) => {this.setState({pass}); global.password=this.state.pass;}} placeholder="Password" placeholderColor="#c4c3cb" style={styles.loginFormTextInput} secureTextEntry={true}/>
             <Button color="#3897f1" title="Login" onPress={this._signInAsync} />
             <Button
               buttonStyle={styles.fbLoginButton}
