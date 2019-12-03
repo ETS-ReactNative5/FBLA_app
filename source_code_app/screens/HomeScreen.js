@@ -7,8 +7,12 @@ import { Appearance, AppearanceProvider, useColorScheme } from 'react-native-app
 import { useTheme } from 'react-navigation';
 
 export default class HomeScreen extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
-    const { navigation } = this.props;
+    const {navigate} = this.props.navigation;
     return (
       <ScrollView style={styles.container,{backgroundColor: global.color1, paddingTop: 25,}}>
         <View style={styles.container,{backgroundColor: global.color1}} contentContainerStyle={styles.contentContainer,{backgroundColor: global.color1}}>
@@ -18,11 +22,11 @@ export default class HomeScreen extends React.Component {
           </View>
 
           <View style={styles.getStartedContainer,{backgroundColor: global.color1}}> 
-            <Text style={styles.getStartedText}>This is an app that does stuff.</Text>
-            <Button 
-              style={styles.getStartedText}
-              title="Join FBLA" 
+            <Text style={styles.getStartedText}>FBLA is pretty neat.</Text>
+            <Button
               onPress={() => navigate('Form') }
+              title="Sign Up for FBLA"
+              color="#007ce1"
             />
           </View>
         

@@ -26,7 +26,7 @@ LicenseStack.path = '';
 /*====================================================================================*/
 
 /*====================================================================================*/
-import LicenseScreen from '../screens/FormScreen';
+import FormScreen from '../screens/FormScreen';
 const FormStack = createStackNavigator(
   {
     Form: FormScreen,
@@ -38,7 +38,7 @@ FormStack.navigationOptions = {
     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-document' : 'md-document'} />
   ),
 };
-LicenseStack.path = '';
+FormStack.path = '';
 /*====================================================================================*/
 
 /*====================================================================================*/

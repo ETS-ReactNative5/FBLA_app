@@ -42,11 +42,6 @@ export default class EventsScreen extends React.Component {
           }}
         />
         <Text style={styles.left,{color: global.textColor, fontWeight: 'bold', textAlign:'center'}}>{"\n"}No events on {this.state.daySelected}.</Text>
-        <Button
-          onPress={() => navigate('Form') }
-          title="Sign Up for FBLA"
-          color="#007ce1"
-        />
       </ScrollView>
     );
   }
