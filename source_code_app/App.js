@@ -24,10 +24,6 @@ export default class App extends Component {
       </AppearanceProvider>
     );
   }
-
-  _Refresh = async () => {
-    this.forceUpdate();
-  }
 }
 
 

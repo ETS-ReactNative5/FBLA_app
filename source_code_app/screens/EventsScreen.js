@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
-import { ScrollView, StyleSheet, Text, Button, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, Button, View, AsyncStorage } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 const styles = StyleSheet.create(require('../stylesheet'));
 import {Calendar, CalendarList, Agenda} from 'react-native-calendars';
-
 
 export default class EventsScreen extends React.Component {
   constructor(props) {
     super(props);
   }
-
   state = {daySelected: "today"};
 
   render() {
@@ -44,6 +42,11 @@ export default class EventsScreen extends React.Component {
           }}
         />
         <Text style={styles.left,{color: global.textColor, fontWeight: 'bold', textAlign:'center'}}>{"\n"}No events on {this.state.daySelected}.</Text>
+        <Button
+          onPress={() => navigate('Form') }
+          title="Sign Up for FBLA"
+          color="#007ce1"
+        />
       </ScrollView>
     );
   }

@@ -17,7 +17,7 @@ import {
 const styles = StyleSheet.create(require('../loginstyle.js'));
 import { AuthSession } from 'expo';
 
-const appId = "1047121222092614"
+//const appId = "1047121222092614"
 
 export default class LoginScreen extends React.Component {
   static navigationOptions = {
@@ -43,19 +43,19 @@ export default class LoginScreen extends React.Component {
             <TextInput value={this.state.user} onChangeText={(user) => {this.setState({user}); global.username=this.state.user;}} placeholder="Username" placeholderColor="#c4c3cb" style={styles.loginFormTextInput} />
             <TextInput value={this.state.pass} onChangeText={(pass) => {this.setState({pass}); global.password=this.state.pass;}} placeholder="Password" placeholderColor="#c4c3cb" style={styles.loginFormTextInput} secureTextEntry={true}/>
             <Button color="#3897f1" title="Login" onPress={this._signInAsync} />
-            <Button
+            {/*<Button
               buttonStyle={styles.fbLoginButton}
               onPress={() => this.onFbLoginPress()}
               title="Login with Facebook"
               color="#3897f1"
-            />
+            />*/}
           </View>
         </View>
 
     );
   }
 
-  async onFbLoginPress() {
+  /*async onFbLoginPress() {
     const { type, token } = await Expo.Facebook.logInWithReadPermissionsAsync(appId, {
       permissions: ['public_profile', 'email'],
     });
@@ -67,5 +67,5 @@ export default class LoginScreen extends React.Component {
         `Hi ${(await response.json()).name}!`,
       );
     }
-  }
+  }*/
 }

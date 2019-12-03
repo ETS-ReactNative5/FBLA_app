@@ -19,7 +19,11 @@ export default class HomeScreen extends React.Component {
 
           <View style={styles.getStartedContainer,{backgroundColor: global.color1}}> 
             <Text style={styles.getStartedText}>This is an app that does stuff.</Text>
-            <Text style={styles.getStartedText}>Wow.</Text>
+            <Button 
+              style={styles.getStartedText}
+              title="Join FBLA" 
+              onPress={() => navigate('Form') }
+            />
           </View>
         
         </View>

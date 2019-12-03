@@ -1,4 +1,4 @@
-import { Appearance, AppearanceProvider, useColorScheme } from 'react-native-appearance';
+import { Appearance, AppearanceProvider, useColorScheme, AsyncStorage } from 'react-native-appearance';
 
 global.darkMode = Appearance.getColorScheme()=='light' ? false : true;
 
@@ -17,3 +17,15 @@ global.updateColors = function updateColors(){
   global.textColor = ((global.darkMode == false) ? 'rgba(96,100,109, 1)' : '#FFF');
   global.theme = ((global.darkMode == false) ? 'light' : 'dark');
 };
+
+global.retrieveItem = async (key) => {
+  try {
+    const retrievedItem =  await AsyncStorage.getItem(key);
+    const item = JSON.parse(retrievedItem);
+    item = item.toString();
+    return item;
+  } catch (error) {
+    console.log(error.message);
+  }
+  return
+}

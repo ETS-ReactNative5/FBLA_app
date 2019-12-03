@@ -26,10 +26,27 @@ LicenseStack.path = '';
 /*====================================================================================*/
 
 /*====================================================================================*/
+import LicenseScreen from '../screens/FormScreen';
+const FormStack = createStackNavigator(
+  {
+    Form: FormScreen,
+  },
+);
+FormStack.navigationOptions = {
+  tabBarLabel: 'Form',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-document' : 'md-document'} />
+  ),
+};
+LicenseStack.path = '';
+/*====================================================================================*/
+
+/*====================================================================================*/
 const AppStack = createStackNavigator(
   {
     Main: MainTabNavigator,
     License: LicenseStack,
+    Form: FormStack,
   }
 );
 import LoginScreen from '../screens/LoginScreen';

@@ -35,6 +35,10 @@ export default class MoreScreen extends React.Component {
                 this.setState({darkModeState: ((this.state.darkModeState == false) ? true : false)});
                 global.darkMode=this.state.darkModeState;
                 updateColors();
+                async () => {
+                  await AsyncStorage.setItem('asyncDarkMode', global.darkMode);
+                  global.darkMode = await AsyncStorage.getItem('asyncDarkMode');
+                }
               }}
               value={global.darkMode}
               ios_backgroundColor="white"
@@ -45,15 +49,12 @@ export default class MoreScreen extends React.Component {
 
         <View style={{backgroundColor: global.color2}}>
           <Text>{"\n"}</Text>
-          <View style={{flexDirection: "row", justifyContent: 'center', alignItems: 'center' }}>
-            <Text style={styles.left,{color: global.textColor}}>{"    "}Refresh App {"                                       "}</Text>
-            <Switch
-              onValueChange={() => {
+          <View style={{flexDirection: "row", justifyContent: 'center', alignItems: 'center', alignContent: 'center' }}>
+            <Button
+              title="Reload App" onPress={() => {
                 this.setState({refresh: ((this.state.refresh == false) ? true : false)});
                 NativeModules.DevSettings.reload();
               }}
-              value={this.state.refresh}
-              ios_backgroundColor="white"
             />
           </View>
           <Text>{"\n"}</Text>
