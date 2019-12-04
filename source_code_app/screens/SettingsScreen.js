@@ -51,7 +51,7 @@ export default class MoreScreen extends React.Component {
           <Text>{"\n"}</Text>
           <View style={{flexDirection: "row", justifyContent: 'center', alignItems: 'center', alignContent: 'center' }}>
             <Button
-              title="Reload App" onPress={() => {
+              title="Refresh App" onPress={() => {
                 this.setState({refresh: ((this.state.refresh == false) ? true : false)});
                 NativeModules.DevSettings.reload();
               }}

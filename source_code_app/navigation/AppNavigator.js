@@ -16,12 +16,6 @@ const LicenseStack = createStackNavigator(
     License: LicenseScreen,
   },
 );
-LicenseStack.navigationOptions = {
-  tabBarLabel: 'License',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-document' : 'md-document'} />
-  ),
-};
 LicenseStack.path = '';
 /*====================================================================================*/
 
@@ -32,12 +26,6 @@ const FormStack = createStackNavigator(
     Form: FormScreen,
   },
 );
-FormStack.navigationOptions = {
-  tabBarLabel: 'Form',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-document' : 'md-document'} />
-  ),
-};
 FormStack.path = '';
 /*====================================================================================*/
 
