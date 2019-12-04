@@ -21,7 +21,7 @@ export default class EventsScreen extends React.Component {
           }}
           theme={{
             backgroundColor: global.color3,
-            calendarBackground: global.color3,
+            calendarBackground: global.color2,
             textSectionTitleColor: '#b6c1cd',
             selectedDayBackgroundColor: '#00adf5',
             selectedDayTextColor: '#ffffff',

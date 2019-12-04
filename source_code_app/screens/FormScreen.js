@@ -7,8 +7,8 @@ import '../global.js';
 import t from 'tcomb-form-native';
 
 var Person = t.struct({
-  name: t.String,
-  surname: t.maybe(t.String),
+  firstName: t.String,
+  lastName: t.maybe(t.String),
   age: t.Number,
   email: t.String,
   password: t.String,
@@ -16,9 +16,9 @@ var Person = t.struct({
 });
 const formOptions = {};
 const Form = t.form.Form;
-
-t.form.Form.stylesheet.textbox.normal.color = global.textColor;
-t.form.Form.stylesheet.controlLabel.normal.color = global.textColor;
+const formStyles = t.form.Form.stylesheet;
+formStyles.textbox.normal.color = global.textColor;
+formStyles.controlLabel.normal.color = global.textColor;
 
 export default class FormScreen extends React.Component {
   constructor(props) {
@@ -29,6 +29,7 @@ export default class FormScreen extends React.Component {
     const {navigate} = this.props.navigation;
     return (
       <ScrollView style={styles.profileContainer,{backgroundColor: global.color1, textAlign: 'center'}}>
+        <Text>{"\n"}</Text>
         <Form
           ref="form"
           type={Person}

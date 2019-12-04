@@ -1,7 +1,8 @@
 #!/bin/bash
 
+projectDir="$(cd -P -- "$(dirname -- "$0")" && pwd -P)"
+
 function dirChange {
-  projectDir="$(cd -P -- "$(dirname -- "$0")" && pwd -P)"
   cd $projectDir
   cd ../
   if test "$1" == "run"
