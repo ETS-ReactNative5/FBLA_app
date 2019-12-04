@@ -36,7 +36,7 @@ done
 while :
 do
 
-  echo "Would you like to update your branch (a), merge your branch with the master (b), update your local directory (c), start expo (d), or exit (exit)?"
+  echo "Would you like to update your branch (a), merge your branch with the master (b), update your local directory (c), start expo (d), or exit (e or exit)?"
   read option
 
   if test "$option" == "a"
@@ -72,7 +72,7 @@ do
     expo start
   fi
 
-  if test "$option" == "exit"
+  if test "$option" == "exit" || test "$option" == "e"
   then
     break
     exit
