@@ -16,7 +16,7 @@ export default class LicenseScreen extends React.Component {
             <Text style={styles.licenseText}>
                 <Text style={{textAlign: 'center'}}>
                     MIT License{"\n"} 
-                    Copyright © 2019 Ethan127, WackyWolff
+                    Copyright © 2019 Ethan Schnathorst, Evan Sonin
                 </Text>
                 {"\n\n"}
                 Permission is hereby granted, free of charge, to any person obtaining a copy

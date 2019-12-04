@@ -8,7 +8,7 @@ import t from 'tcomb-form-native';
 
 var Person = t.struct({
   firstName: t.String,
-  lastName: t.maybe(t.String),
+  lastName: t.String,
   age: t.Number,
   email: t.String,
   password: t.String,

@@ -29,6 +29,10 @@ export default class LoginScreen extends React.Component {
     this.props.navigation.navigate('App');
   };
 
+  _makeAccount = async () => {
+    this.props.navigation.navigate("Form");
+  };
+
   state = {user: null, pass: null,};
 
   render() {
@@ -41,6 +45,7 @@ export default class LoginScreen extends React.Component {
           <TextInput value={this.state.user} onChangeText={(user) => {this.setState({user}); global.username=this.state.user;}} placeholder="Username" placeholderColor="#c4c3cb" style={styles.loginFormTextInput} />
           <TextInput value={this.state.pass} onChangeText={(pass) => {this.setState({pass}); global.password=this.state.pass;}} placeholder="Password" placeholderColor="#c4c3cb" style={styles.loginFormTextInput} secureTextEntry={true}/>
           <Button color="#3897f1" title="Login" onPress={this._signInAsync} />
+          <Button color="#3897f1" title="Make Account" onPress={this._makeAccount} />
         </View>
       </View>
     );
