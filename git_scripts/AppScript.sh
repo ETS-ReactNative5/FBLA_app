@@ -1,6 +1,7 @@
 #!/bin/bash
 
 projectDir="$(cd -P -- "$(dirname -- "$0")" && pwd -P)"
+declare -a validUsers=( "Ethan" "Evan" )
 
 function dirChange {
   cd $projectDir
@@ -14,6 +15,23 @@ function dirChange {
 function join {
   local IFS="$1"; shift; echo "$*";
 }
+
+while :
+do
+  echo "Who are you?"
+  read user
+  for (( i=0; i<${#validUsers[@]}; i++ ));
+  do
+    if test "$user" == "${validUsers[$i]}"
+    then
+      branch="$user""Branch"
+      echo "Your branch is $branch"
+      echo
+      break 3
+    fi
+  done
+  echo "Invalid user."
+done
 
 while :
 do
