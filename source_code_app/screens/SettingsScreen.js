@@ -36,11 +36,6 @@ export default class MoreScreen extends React.Component {
                 this.setState({darkModeState: ((this.state.darkModeState == false) ? true : false)});
                 global.darkMode=this.state.darkModeState;
                 updateColors();
-                async () => {
-                  await AsyncStorage.setItem('asyncDarkMode', global.darkMode);
-                };
-                this.a = AsyncStorage.getItem('asyncDarkMode');
-                console.log(this.a);
               }}
               value={global.darkMode}
               ios_backgroundColor="white"

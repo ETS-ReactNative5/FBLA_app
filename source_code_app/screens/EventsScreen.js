@@ -45,24 +45,26 @@ export default class EventsScreen extends Component {
         const strTime = this.timeToString(time);
         if (!this.state.items[strTime]) {
           this.state.items[strTime] = [];
-          let message;
           switch(strTime){
 
 
             //put marked days here
+            case "2019-12-07":
+              this.makeItem(strTime, "ptotato");
+              this.makeItem(strTime, "ptotato");
+              this.makeItem(strTime, "ptotato");
+              this.makeItem(strTime, "ptotato");
+              break;
             case "2019-12-08":
-              message = 'asldjfasjdfjasdfj';
+              this.makeItem(strTime, "asdfsf");
+              this.makeItem(strTime, "asdfsf");
               break;
 
-
+              
 
             default:
-              message = null;
               break;
           }
-          this.state.items[strTime].push({
-            name: message,
-          });
         }
       }
       const newItems = {};
@@ -81,7 +83,7 @@ export default class EventsScreen extends Component {
 
   renderEmptyDate() {
     return (
-      <View style={styles.emptyDate}><Text>This is empty date!</Text></View>
+      <View style={styles.emptyDate}><Text></Text></View>
     );
   }
 
@@ -92,6 +94,12 @@ export default class EventsScreen extends Component {
   timeToString(time) {
     const date = new Date(time);
     return date.toISOString().split('T')[0];
+  }
+
+  makeItem(day, mess){
+    this.state.items[day].push({
+      name: mess,
+    });
   }
 }
 
