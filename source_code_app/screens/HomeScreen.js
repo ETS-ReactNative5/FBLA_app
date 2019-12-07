@@ -28,8 +28,10 @@ export default class HomeScreen extends React.Component {
               title="Sign Up for FBLA"
               color="#007ce1"
             />
-          </View>
-        
+            </View>
+        </View>
+        <View style={styles.getStartedContainer,{backgroundColor: global.color1}}> 
+            <Text style={styles.infoText}>Future Business Leaders of America-Phi Beta Lambda, Inc. (FBLA-PBL) is the largest career student business organization in the world. Each year, FBLA-PBL helps over 230,000 members prepare for careers in business.</Text>
         </View>
       </ScrollView>
     );

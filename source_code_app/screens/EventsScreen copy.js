@@ -19,21 +19,23 @@ export default class EventsScreen extends Component {
       <Agenda
         items={this.state.items}
         loadItemsForMonth={this.loadItems.bind(this)}
+        //selected={this.getDate()}
         renderItem={this.renderItem.bind(this)}
         renderEmptyDate={this.renderEmptyDate.bind(this)}
         rowHasChanged={this.rowHasChanged.bind(this)}
-        /*markingType={'period'}
-        markedDates={{
-           '2019-12-08': {textColor: '#666'},
-           '2019-12-09': {textColor: '#666'},
-           '2019-12-14': {startingDay: true, endingDay: true, color: 'blue'},
-           '2019-12-21': {startingDay: true, color: 'blue'},
-           '2019-12-22': {endingDay: true, color: 'gray'},
-           '2019-12-24': {startingDay: true, color: 'gray'},
-           '2019-12-25': {color: 'gray'},
-           '2017-05-26': {endingDay: true, color: 'gray'}}}
-        monthFormat={'yyyy'}
-        renderDay={(day, item) => (<Text>{day ? day.day: 'item'}</Text>)}*/
+        // markingType={'period'}
+        // markedDates={{
+        //    '2017-05-08': {textColor: '#666'},
+        //    '2017-05-09': {textColor: '#666'},
+        //    '2017-05-14': {startingDay: true, endingDay: true, color: 'blue'},
+        //    '2017-05-21': {startingDay: true, color: 'blue'},
+        //    '2017-05-22': {endingDay: true, color: 'gray'},
+        //    '2017-05-24': {startingDay: true, color: 'gray'},
+        //    '2017-05-25': {color: 'gray'},
+        //    '2017-05-26': {endingDay: true, color: 'gray'}}}
+        // monthFormat={'yyyy'}
+        // theme={{calendarBackground: 'red', agendaKnobColor: 'green'}}
+        //renderDay={(day, item) => (<Text>{day ? day.day: 'item'}</Text>)}
       />
     );
   }
@@ -45,20 +47,13 @@ export default class EventsScreen extends Component {
         const strTime = this.timeToString(time);
         if (!this.state.items[strTime]) {
           this.state.items[strTime] = [];
-          let message;
-          switch(strTime){
-            //put marked days here
-            case "2019-12-08":
-              message = 'asldjfasjdfjasdfj';
-              break;
-
-            default:
-              message = null;
-              break;
+          const numItems = Math.floor(Math.random() * 5);
+          for (let j = 0; j < numItems; j++) {
+            this.state.items[strTime].push({
+              name: 'Item for ' + strTime,
+              height: Math.max(50, Math.floor(Math.random() * 150))
+            });
           }
-          this.state.items[strTime].push({
-            name: message,
-          });
         }
       }
       const newItems = {};

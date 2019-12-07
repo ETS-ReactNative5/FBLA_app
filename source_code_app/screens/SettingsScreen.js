@@ -7,6 +7,7 @@ const styles = StyleSheet.create(require('../stylesheet'));
 export default class MoreScreen extends React.Component {
   constructor(props) {
     super(props);
+    this.a=0;
   }
 
   state = {darkModeState: false,refresh: false};
@@ -37,8 +38,9 @@ export default class MoreScreen extends React.Component {
                 updateColors();
                 async () => {
                   await AsyncStorage.setItem('asyncDarkMode', global.darkMode);
-                  global.darkMode = await AsyncStorage.getItem('asyncDarkMode');
-                }
+                };
+                this.a = AsyncStorage.getItem('asyncDarkMode');
+                console.log(this.a);
               }}
               value={global.darkMode}
               ios_backgroundColor="white"
