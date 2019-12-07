@@ -14,7 +14,7 @@ export default class HomeScreen extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     return (
-      <ScrollView style={styles.container,{backgroundColor: global.color1, paddingTop: 25,}}>
+      <View style={styles.container,{backgroundColor: global.color1, paddingTop: 25,}}>
         <View style={styles.container,{backgroundColor: global.color1}} contentContainerStyle={styles.contentContainer,{backgroundColor: global.color1}}>
 
           <View style={styles.welcomeContainer}>
@@ -23,7 +23,7 @@ export default class HomeScreen extends React.Component {
 
 
         </View>
-        <View style={styles.getStartedContainer,{backgroundColor: global.color1, alignContent: 'center', alignItems: 'center',}}> 
+        <View style={styles.getStartedContainer,{backgroundColor: global.color1, textAlign: 'center', alignContent: 'center', alignItems: 'center',}}> 
             <Text style={styles.infoText}>Future Business Leaders of America-Phi Beta Lambda, Inc. (FBLA-PBL) is 
             the largest career student business organization in the world. Each year, FBLA-PBL helps over 230,000 
             members prepare for careers in business.
@@ -32,7 +32,7 @@ export default class HomeScreen extends React.Component {
             in a broad range of business and career-related areas. Through state-based competition at the spring State
              Leadership Conferences, members compete in events that test their business knowledge and skills. Top winners 
              in each state are eligible to compete for honors at the National Leadership Conference each summer.
-             {"\n\n\n\n"}
+             {"\n"}
             </Text>
             <View style={styles.getStartedContainer,{backgroundColor: global.color1}}> 
             <Text style={styles.getStartedText}>Interested?</Text>
@@ -41,9 +41,13 @@ export default class HomeScreen extends React.Component {
               title="Sign Up for FBLA"
               color="#007ce1"
             />
+             <Text style={styles.infoText}>
+               {"\n"}
+             </Text>
+
             </View>
         </View>
-      </ScrollView>
+      </View>
     );
   }
 }
