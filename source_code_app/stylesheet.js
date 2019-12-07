@@ -50,8 +50,8 @@ module.exports = {
     marginBottom: 20,
   },
   welcomeImage: {
-    width: 100,
-    height: 80,
+    width: 200,
+    height: 160,
     resizeMode: 'contain',
     marginTop: 3,
     marginLeft: -10,
@@ -89,10 +89,10 @@ module.exports = {
     marginBottom: 5,
   },
   infoText: {
-    fontSize: 18,
+    fontSize: 17,
     color: 'rgba(96,100,109, 1)',
     lineHeight: 24,
-    textAlign: 'left',
+    textAlign: 'center',
     marginTop: 10,
     marginLeft: 10,
     marginRight: 10,
