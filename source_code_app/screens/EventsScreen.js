@@ -47,10 +47,14 @@ export default class EventsScreen extends Component {
           this.state.items[strTime] = [];
           let message;
           switch(strTime){
+
+
             //put marked days here
             case "2019-12-08":
               message = 'asldjfasjdfjasdfj';
               break;
+
+
 
             default:
               message = null;
@@ -94,6 +98,7 @@ export default class EventsScreen extends Component {
 const styles = StyleSheet.create({
   item: {
     backgroundColor: global.color2,
+    color: global.textColor,
     flex: 1,
     borderRadius: 5,
     padding: 10,
