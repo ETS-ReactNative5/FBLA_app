@@ -7,7 +7,7 @@ import { Appearance, AppearanceProvider, useColorScheme } from 'react-native-app
 import { useTheme } from 'react-navigation';
 import { isDebuggerStatement } from '@babel/types';
 
-export default class HomeScreen extends React.Component {
+export default class QA extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -83,7 +83,7 @@ export default class HomeScreen extends React.Component {
   }
 }
 
-HomeScreen.navigationOptions = {
-  title: 'Home',
+QA.navigationOptions = {
+  title: 'QA',
   header: null,
 };
