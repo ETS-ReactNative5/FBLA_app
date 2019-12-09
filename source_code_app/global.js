@@ -10,6 +10,7 @@ global.theme = ((global.darkMode == false) ? 'light' : 'dark');
 global.username = null;
 global.password = null;
 
+//Updates the colors between themes
 global.updateColors = function updateColors(){
   global.color1 = ((global.darkMode == false) ? '#FFF' : '#000');
   global.color2 = ((global.darkMode == false) ? '#FBFBFB' : '#2B2B2B');

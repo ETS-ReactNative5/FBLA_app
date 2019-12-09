@@ -30,11 +30,22 @@ FormStack.path = '';
 /*====================================================================================*/
 
 /*====================================================================================*/
+import QAScreen from '../screens/QA';
+const QAStack = createStackNavigator(
+  {
+    QA: QAScreen,
+  },
+);
+QAStack.path = '';
+/*====================================================================================*/
+
+/*====================================================================================*/
 const AppStack = createStackNavigator(
   {
     Main: MainTabNavigator,
     License: LicenseStack,
     Form: FormStack,
+    QA: QAStack,
   }
 );
 import LoginScreen from '../screens/LoginScreen';

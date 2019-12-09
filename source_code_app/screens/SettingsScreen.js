@@ -7,7 +7,6 @@ const styles = StyleSheet.create(require('../stylesheet'));
 export default class MoreScreen extends React.Component {
   constructor(props) {
     super(props);
-    this.a=0;
   }
 
   state = {darkModeState: false,refresh: false};
