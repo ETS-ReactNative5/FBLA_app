@@ -20,22 +20,19 @@ export default class officerScreen extends Component {
   }
 
   makeRemoteRequest = () => {
-    const url = `https://randomuser.me/api/?&results=20`;
     this.setState({ loading: true });
 
-    fetch(url)
-      .then(res => res.json())
-      .then(res => {
-        this.setState({
-          data: res.results,
-          error: res.error || null,
-          loading: false,
-        });
-        this.arrayholder = res.results;
-      })
-      .catch(error => {
-        this.setState({ error, loading: false });
+    const people = require('../people.json');
+
+    const load = (people) => {
+      this.setState({
+        data: people.peopleList,
+        loading: false,
       });
+      this.arrayholder = people.results;
+    };
+
+    load(people);
   };
 
   renderSeparator = () => {
@@ -94,8 +91,8 @@ export default class officerScreen extends Component {
           data={this.state.data}
           renderItem={({ item }) => (
             <ListItem
-              leftAvatar={{ source: { uri: item.picture.thumbnail } }}
-              title={`${item.name.first} ${item.name.last}`}
+              leftAvatar={{ source: { uri: item.picture } }}
+              title= {item.name.title===undefined ? `${item.name.first} ${item.name.last}` : `${item.name.title} ${item.name.first} ${item.name.last}`}
               subtitle={item.email}
             />
           )}

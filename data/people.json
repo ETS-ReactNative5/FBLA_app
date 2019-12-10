@@ -1,0 +1,65 @@
+{"results": [
+    {
+        "gender": "male",
+        "name": {
+            "title": "Mr",
+            "first": "Bilklglhlhklhlkjhlkjhkljhlkhjly",
+            "last": "Carlson"
+        },
+        "location": {
+            "street": {
+            "number": 941,
+            "name": "The Drive"
+            },
+            "city": "Loughrea",
+            "state": "Limerick",
+            "country": "Ireland",
+            "postcode": 81702,
+            "coordinates": {
+            "latitude": "21.9297",
+            "longitude": "-107.8023"
+            },
+            "timezone": {
+            "offset": "+3:00",
+            "description": "Baghdad, Riyadh, Moscow, St. Petersburg"
+            }
+        },
+        "email": "billy.carlson@example.com",
+        "login": {
+            "uuid": "1181d98c-80e2-4433-8547-03422142ea94",
+            "username": "goldenkoala142",
+            "password": "electron",
+            "salt": "Ga6jqmns",
+            "md5": "c06f9593c6098c20c03915e258a76c56",
+            "sha1": "85864cfc8fb9a36d942d0ff333c42e441bddc55b",
+            "sha256": "65e3fd44a39577c3d24e883981104900468f37abf27b919543f5ab8bd0ee3f9f"
+        },
+        "dob": {
+            "date": "1955-06-18T06:38:34.895Z",
+            "age": 64
+        },
+        "registered": {
+            "date": "2006-08-16T00:12:54.520Z",
+            "age": 13
+        },
+        "phone": "021-021-9662",
+        "cell": "081-551-8927",
+        "id": {
+            "name": "PPS",
+            "value": "0165500T"
+        },
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/men/18.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/men/18.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/men/18.jpg"
+        },
+        "nat": "IE"
+    }
+],
+"info": {
+    "seed": "e0bc0c353ca1b003",
+    "results": 1,
+    "page": 1,
+    "version": "1.3"
+}
+}

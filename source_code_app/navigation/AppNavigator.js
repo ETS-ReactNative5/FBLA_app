@@ -30,7 +30,7 @@ FormStack.path = '';
 /*====================================================================================*/
 
 /*====================================================================================*/
-import OfficerScreen from '../screens/officerScreen';
+import OfficerScreen from '../screens/OfficerScreen';
 const OfficerStack = createStackNavigator(
   {
     Officers: OfficerScreen,
