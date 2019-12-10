@@ -22,7 +22,7 @@ export default class HomeScreen extends React.Component {
     if (this.state.userType=='guest'){
     //if user is guest
       return (
-        <View style={styles.container,{backgroundColor: global.color1, paddingTop: 25,}}>
+        <ScrollView style={styles.container,{backgroundColor: global.color1, paddingTop: 25,}}>
           <View style={styles.container,{backgroundColor: global.color1}} contentContainerStyle={styles.contentContainer,{backgroundColor: global.color1}}>
 
             <View style={styles.welcomeContainer}>
@@ -55,7 +55,7 @@ export default class HomeScreen extends React.Component {
 
               </View>
           </View>
-        </View>
+        </ScrollView>
       );
     }
 
