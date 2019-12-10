@@ -30,6 +30,16 @@ FormStack.path = '';
 /*====================================================================================*/
 
 /*====================================================================================*/
+import OfficerScreen from '../screens/officerScreen';
+const OfficerStack = createStackNavigator(
+  {
+    Officers: OfficerScreen,
+  },
+);
+OfficerStack.path = '';
+/*====================================================================================*/
+
+/*====================================================================================*/
 import QAScreen from '../screens/QA';
 const QAStack = createStackNavigator(
   {
@@ -40,12 +50,24 @@ QAStack.path = '';
 /*====================================================================================*/
 
 /*====================================================================================*/
+import EventsCal from '../screens/EventsCal';
+const EventsStack = createStackNavigator(
+  {
+    EventsCal: EventsCal,
+  },
+);
+EventsStack.path = '';
+/*====================================================================================*/
+
+/*====================================================================================*/
 const AppStack = createStackNavigator(
   {
     Main: MainTabNavigator,
     License: LicenseStack,
     Form: FormStack,
     QA: QAStack,
+    EventsCal: EventsStack,
+    Officers: OfficerStack,
   }
 );
 import LoginScreen from '../screens/LoginScreen';

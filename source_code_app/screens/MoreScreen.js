@@ -31,7 +31,11 @@ export default class MoreScreen extends React.Component {
           onPress={() => navigate('QA') }
           title="Q&A Page"
           color="#007ce1"
-          accessibilityLabel="Edit App Settings."
+        />
+        <Button
+          onPress={() => navigate('Officers') }
+          title="Local Officer Team"
+          color="#007ce1"
         />
       </ScrollView>
     );

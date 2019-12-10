@@ -7,12 +7,16 @@ import { Question , FAQ } from '../react-native-faq/index'
  
 const questions = [
     {
-        question: "Hasfdhelp you?",
-        reply: "You have asdf",
+        question: "How can I join?",
+        reply: "On the main page of this app, there is a signup form. Simply click on 'Sign up for FBLA' to get started.",
     },
     {
-        question: "asdf",
-        reply: "asdfasdfasdfasdfasdf",
+        question: "When are the competitions?",
+        reply: "The district competition is usally in the winter, in January. The state conference is usually in April, and nationals are usually in late June or July.",
+    },
+    {
+            question: "What events are there to choose from?",
+            reply: "There are many events to choose from! Simply go to the events tab to find out.",
     }
 ]
  
