@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Ethan and Evan's FBLA App",
+    "name": "Rock Canyon FBLA App",
     "slug": "ee-fbla-app",
     "privacy": "public",
     "sdkVersion": "35.0.0",
@@ -29,6 +29,7 @@
     "android": {
       "package": "com.ethanandevan.fblaapp"
     },
-    "description": ""
+    "description": "App for FBLA-PBL App Design at Rock Canyon, 2019/2020.",
+    "githubUrl": "https://github.com/Ethan127/FBLA_app"
   }
 }
