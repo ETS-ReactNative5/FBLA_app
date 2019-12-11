@@ -24,7 +24,7 @@ export default class HomeScreen extends React.Component {
     if (this.state.userType=='guest'){
     //if user is guest
       return (
-        <ScrollView style={styles.container,{backgroundColor: global.color1, paddingTop: 0,}}>
+        <ScrollView style={styles.container,{backgroundColor: global.color1, paddingTop: 15,}}>
           <View style={styles.container,{backgroundColor: global.color1}} contentContainerStyle={styles.contentContainer,{backgroundColor: global.color1}}>
 
             <View style={styles.welcomeContainer}>
@@ -70,7 +70,7 @@ export default class HomeScreen extends React.Component {
               <Image source={require('../assets/images/FBLA-Logo.png')} style={styles.welcomeImage} />
             </View>
 
-            <Text style={styles.infoText, {fontWeight: 'bold', textAlign: 'center'}}>{"\n\n"}Hello, {global.username}{"\n\n"}</Text>
+            <Text style={styles.infoText, {fontWeight: 'bold', textAlign: 'center', fontSize: 20}}>{"\n\n"}Hello, {global.username}{"\n\n"}</Text>
             <View style={styles.getStartedContainer,{backgroundColor: global.color1}}> 
             <Button
               onPress={() => navigate('QR') }
@@ -115,5 +115,5 @@ export default class HomeScreen extends React.Component {
 
 HomeScreen.navigationOptions = {
   title: 'Home',
-  //header: null,
+  header: null,
 };

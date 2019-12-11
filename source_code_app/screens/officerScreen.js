@@ -29,7 +29,7 @@ export default class officerScreen extends Component {
         data: people.peopleList,
         loading: false,
       });
-      this.arrayholder = people.results;
+      this.arrayholder = people.peopleList;
     };
 
     load(people);
@@ -54,7 +54,7 @@ export default class officerScreen extends Component {
     });
 
     const newData = this.arrayholder.filter(item => {
-      const itemData = `${item.name.title.toUpperCase()} ${item.name.first.toUpperCase()} ${item.name.last.toUpperCase()}`;
+      const itemData = item.name.title===undefined ? `${item.name.first.toUpperCase()} ${item.name.last.toUpperCase()}` : `${item.name.title.toUpperCase()} ${item.name.first.toUpperCase()} ${item.name.last.toUpperCase()}`;
       const textData = text.toUpperCase();
 
       return itemData.indexOf(textData) > -1;

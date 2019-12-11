@@ -6,14 +6,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import EventsScreen from '../screens/EventsScreen';
-import MoreScreen from '../screens/MoreScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import EventsCal from '../screens/EventsCal';
-
-import DrawerNavigator from './DrawerNavigator';
-DrawerNavigator.navigationOptions={
-  header: null,
-};
 
 //https://infinitered.github.io/ionicons-version-3-search/
 
@@ -77,24 +71,6 @@ EventsStack.path = '';
 /*====================================================================================*/
 
 /*====================================================================================*/
-const MoreStack = createStackNavigator(
-  {
-    More: MoreScreen,
-  },
-  config
-);
-
-MoreStack.navigationOptions = {
-  tabBarLabel: 'More',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-more' : 'md-more'} />
-  ),
-};
-
-MoreStack.path = '';
-/*====================================================================================*/
-
-/*====================================================================================*/
 const SettingsStack = createStackNavigator(
   {
     Settings: SettingsScreen,
@@ -103,7 +79,7 @@ const SettingsStack = createStackNavigator(
 );
 
 SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
+  tabBarLabel: 'Misc',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-settings' : 'md-settings'} />
   ),
@@ -116,7 +92,6 @@ const tabNavigator = createBottomTabNavigator({
   HomeStack,
   EventsStack,
   EventsCalStack,
-  MoreStack,
   SettingsStack,
 });
 

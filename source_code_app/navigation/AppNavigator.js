@@ -8,11 +8,6 @@ MainTabNavigator.navigationOptions={
   header: null,
 };
 
-import Drawer from './DrawerNavigator';
-Drawer.navigationOptions={
-  header: null,
-};
-
 
 /*====================================================================================*/
 import LicenseScreen from '../screens/LicenseInfo';
@@ -75,16 +70,23 @@ EventsStack.path = '';
 /*====================================================================================*/
 
 /*====================================================================================*/
+import EventsList from '../screens/EventList';
+const EventsListStack = createStackNavigator(
+  {
+    EventsList: EventsList,
+  },
+);
+EventsListStack.path = '';
 const AppStack = createStackNavigator(
   {
     Main: MainTabNavigator,
-    Drawer: Drawer,
     License: LicenseStack,
     Form: FormStack,
     QA: QAStack,
     EventsCal: EventsStack,
     Officers: OfficerStack,
     QR: QRStack,
+    EventsList: EventsListStack,
   }
 );
 import LoginScreen from '../screens/LoginScreen';
