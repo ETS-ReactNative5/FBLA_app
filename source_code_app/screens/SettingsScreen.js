@@ -34,44 +34,6 @@ export default class MoreScreen extends React.Component {
           <Text>{"\n"}</Text>
           <View style={{justifyContent: 'center', width: "50%"}}>
             <Button
-              title="License"
-              type='solid'
-              icon={
-                <Icon
-                  name="arrow-right"
-                  size={15}
-                  color={global.darkMode==true ? 'white' : 'black'}
-                />
-              }
-              onPress={() => navigate('License')}
-            />
-          </View>
-          <Text>{"\n"}</Text>
-        </View>
-
-        <View style={{backgroundColor: global.color2, justifyContent: 'center',alignItems: 'center', alignContent: 'center'}}>
-          <Text>{"\n"}</Text>
-          <View style={{justifyContent: 'center', width: "50%"}}>
-            <Button
-              title="Q&A"
-              icon={
-                <Icon
-                  name="arrow-right"
-                  size={15}
-                  color={global.darkMode==true ? 'white' : 'black'}
-                />
-              }
-              type='solid'
-              onPress={() => navigate('QA')}
-            />
-          </View>
-          <Text>{"\n"}</Text>
-        </View>
-
-        <View style={{backgroundColor: global.color3, justifyContent: 'center',alignItems: 'center', alignContent: 'center'}}>
-          <Text>{"\n"}</Text>
-          <View style={{justifyContent: 'center', width: "50%"}}>
-            <Button
               title="Local Officer Team"
               icon={
                 <Icon
@@ -106,6 +68,63 @@ export default class MoreScreen extends React.Component {
           <Text>{"\n"}</Text>
         </View>
 
+        <View style={{backgroundColor: global.color3, justifyContent: 'center',alignItems: 'center', alignContent: 'center'}}>
+          <Text>{"\n"}</Text>
+          <View style={{justifyContent: 'center', width: "50%"}}>
+            <Button
+              title="Contact Us"
+              icon={
+                <Icon
+                  name="arrow-right"
+                  size={15}
+                  color={global.darkMode==true ? 'white' : 'black'}
+                />
+              }
+              type='solid'
+              onPress={() => navigate('ContactUs')}
+            />
+          </View>
+          <Text>{"\n"}</Text>
+        </View>
+
+        <View style={{backgroundColor: global.color2, justifyContent: 'center',alignItems: 'center', alignContent: 'center'}}>
+          <Text>{"\n"}</Text>
+          <View style={{justifyContent: 'center', width: "50%"}}>
+            <Button
+              title="Q&A"
+              icon={
+                <Icon
+                  name="arrow-right"
+                  size={15}
+                  color={global.darkMode==true ? 'white' : 'black'}
+                />
+              }
+              type='solid'
+              onPress={() => navigate('QA')}
+            />
+          </View>
+          <Text>{"\n"}</Text>
+        </View>
+
+        <View style={{backgroundColor: global.color3, justifyContent: 'center',alignItems: 'center', alignContent: 'center'}}>
+          <Text>{"\n"}</Text>
+          <View style={{justifyContent: 'center', width: "50%"}}>
+            <Button
+              title="License"
+              type='solid'
+              icon={
+                <Icon
+                  name="arrow-right"
+                  size={15}
+                  color={global.darkMode==true ? 'white' : 'black'}
+                />
+              }
+              onPress={() => navigate('License')}
+            />
+          </View>
+          <Text>{"\n"}</Text>
+        </View>
+
         {/*<View style={{backgroundColor: global.color3}}>
           <Text>{"\n"}</Text>
           <View style={{flexDirection: "row", justifyContent: 'center', alignItems: 'center' }}>
@@ -123,7 +142,7 @@ export default class MoreScreen extends React.Component {
           <Text>{"\n"}</Text>
         </View>*/}
 
-        <View style={{backgroundColor: global.color3}}>
+        <View style={{backgroundColor: global.color2}}>
           <Text>{"\n"}</Text>
           <View style={{flexDirection: "row", justifyContent: 'center', alignItems: 'center', alignContent: 'center' }}>
             <Button

@@ -40,6 +40,16 @@ FormStack.path = '';
 /*====================================================================================*/
 
 /*====================================================================================*/
+import ContactUs from '../screens/ContactUs';
+const ContactUsStack = createStackNavigator(
+  {
+    Contact: ContactUs,
+  },
+);
+ContactUsStack.path = '';
+/*====================================================================================*/
+
+/*====================================================================================*/
 import EventSignUp from '../screens/EventSignUp';
 const EventSignUpStack = createStackNavigator(
   {
@@ -98,6 +108,7 @@ const AppStack = createStackNavigator(
     Attendance: AttendanceStack,
     EventForm: EventSignUpStack,
     QA: QAStack,
+    ContactUs: ContactUsStack,
     EventsCal: EventsStack,
     Officers: OfficerStack,
     QR: QRStack,

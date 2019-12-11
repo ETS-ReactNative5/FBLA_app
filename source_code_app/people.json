@@ -17,5 +17,32 @@
         },
         "email": "srivastavaa@s.dcsdk12.org",
         "picture": "https://i.ytimg.com/vi/JV3CaIDdQE4/maxresdefault.jpg"
+    },
+    {
+        "gender": "male",
+        "name": {
+            "first": "Nihaar",
+            "last": "Gupta"
+        },
+        "email": "guptani@s.dcsdk12.org",
+        "picture": "https://i.ytimg.com/vi/vhyCN35t1ks/hqdefault.jpg"
+    },
+    {
+        "gender": "male",
+        "name": {
+            "first": "Jayendra",
+            "last": "Chauhan"
+        },
+        "email": "chauhanj@s.dcsdk12.org",
+        "picture": "https://asset-cdn.schoology.com/system/files/imagecache/profile_reg/pictures/picture-7ae33019f19e864b9d5ac1076f8b5fe8_5b97c98de17bd.jpg?1536674190"
+    },
+    {
+        "gender": "female",
+        "name": {
+            "first": "Delaney",
+            "last": "Boston"
+        },
+        "email": "bostond@s.dcsdk12.org",
+        "picture": "https://asset-cdn.schoology.com/system/files/imagecache/profile_reg/pictures/picture-12e523d3c391062be605893d8f37fc2a_5b96bdb1b1a73.jpg?1536605617"
     }
 ]}
