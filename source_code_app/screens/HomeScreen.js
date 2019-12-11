@@ -1,6 +1,6 @@
 import * as WebBrowser from 'expo-web-browser';
 import React, { useState } from 'react';
-import { Image, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View, AsyncStorage, }from 'react-native';
+import { Image, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View, AsyncStorage, Linking }from 'react-native';
 import { Button } from 'react-native-elements';
 import { MonoText } from '../components/StyledText';
 const styles = StyleSheet.create(require('../stylesheet'));
@@ -37,8 +37,6 @@ export default class HomeScreen extends React.Component {
               <Text style={styles.infoText}>Future Business Leaders of America-Phi Beta Lambda, Inc. (FBLA-PBL) is 
               the largest career student business organization in the world. Each year, FBLA-PBL helps over 230,000 
               members prepare for careers in business.
-
-              {"\n"}
               </Text>
               <Button type='clear' title="FBLA Website" onPress={ ()=>{ Linking.openURL('https://google.com')}} />
               <Text style={styles.infoText}>
@@ -46,10 +44,11 @@ export default class HomeScreen extends React.Component {
               in a broad range of business and career-related areas. Through state-based competition at the spring State
                 Leadership Conferences, members compete in events that test their business knowledge and skills. Top winners 
                 in each state are eligible to compete for honors at the National Leadership Conference each summer.
-                {"\n\n"}
               </Text>
+              <Button type='clear' title="FBLA Twitter Page" onPress={ ()=>{ Linking.openURL('https://google.com')}} />
+              <Text>{"\n\n"}</Text>
               <View style={styles.getStartedContainer,{backgroundColor: global.color1}}> 
-              <Text style={styles.getStartedText}>Interested?</Text>
+              <Text style={styles.getStartedText}>Interested?{"\n"}</Text>
               <Button
                 onPress={() => navigate('Form') }
                 title="Sign Up for FBLA"
