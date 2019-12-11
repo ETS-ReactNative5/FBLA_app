@@ -45,6 +45,7 @@ export default class LicenseScreen extends React.Component {
   LicenseScreen.navigationOptions = ({ navigation }) => {
     return {
       title: 'License',
+      //https://www.reddit.com/r/furry_irl
       header: null,
     };
   }

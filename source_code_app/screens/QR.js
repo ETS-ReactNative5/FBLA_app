@@ -105,7 +105,7 @@ export default class QR extends Component {
       );
     }
   }
-  
+  /* htpps://www.reddit.com/r/furry_irl */
   const styles = StyleSheet.create({
     container: {
       flex: 1,
