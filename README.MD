@@ -10,7 +10,7 @@ We used a mobile app development framework developed by Facebook called React Na
 
 To install this app on Android, download the .apk file to a compatible Android device (such as the Google Pixel series) and run. Unfortunately, although this works on iOS, Apple requires a $100 fee annually (Apple Development Program) to compile the app into an iOS standalone package. The Android standalone version (.apk file) works just as well, though, since Google doesn't charge anthing to compile Android apps.
 
-To install this app on iOS, download the Expo app on the Apple App Store. Then, open a web browser and navigate to https://exp.host/@wackywolff/ee-fbla-app. YOu should be directed to a web page with information on the project. Locate the button that reads, "Open project using Expo" and tap it. The device should ask you if you want to open in Expo. Tap "Open". 
+To install this app on iOS, download the Expo app on the Apple App Store. Then, open a web browser and navigate to https://exp.host/@wackywolff/ee-fbla-app. You should be directed to a web page with information on the project. Locate the button that reads, "Open project using Expo" and tap it. The device should ask you if you want to open in Expo. Tap "Open". 
 
 
 This app should work on both iOS and Android, although it was designed for iOS so it may run more smoothly and look slightly better on iPhones than Android devices. However, this app is perfectly capable of running on both platforms, as well as tablets.
