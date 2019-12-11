@@ -70,7 +70,7 @@ export default class QR extends Component {
           </Text>
         );
       }
-      return <Text style={styles.scanScreenMessage}>Focus the barcode to scan.</Text>;
+      return <Text style={styles.scanScreenMessage}>Focus the QR code to scan.</Text>;
     }
   
     resetScanner() {
