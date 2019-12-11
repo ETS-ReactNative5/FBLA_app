@@ -1,13 +1,19 @@
 import React from 'react';
 import { Platform } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator, createDrawerNavigator } from 'react-navigation';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import EventsScreen from '../screens/EventsScreen';
 import MoreScreen from '../screens/MoreScreen';
 import SettingsScreen from '../screens/SettingsScreen';
-import LicenseScreen from '../screens/LicenseInfo';
+import EventsCal from '../screens/EventsCal';
+
+import DrawerNavigator from './DrawerNavigator';
+DrawerNavigator.navigationOptions={
+  header: null,
+};
 
 //https://infinitered.github.io/ionicons-version-3-search/
 
@@ -44,6 +50,24 @@ const EventsStack = createStackNavigator(
 
 EventsStack.navigationOptions = {
   tabBarLabel: 'Events',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-list' : 'md-list'} />
+  ),
+};
+
+EventsStack.path = '';
+/*====================================================================================*/
+
+/*====================================================================================*/
+const EventsCalStack = createStackNavigator(
+  {
+    Calendar: EventsCal,
+  },
+  config
+);
+
+EventsCalStack.navigationOptions = {
+  tabBarLabel: 'Calendar',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-calendar' : 'md-calendar'} />
   ),
@@ -91,6 +115,7 @@ SettingsStack.path = '';
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
   EventsStack,
+  EventsCalStack,
   MoreStack,
   SettingsStack,
 });

@@ -11,8 +11,7 @@ var Person = t.struct({
   lastName: t.String,
   age: t.Number,
   email: t.String,
-  password: t.String,
-  rememberMe: t.Boolean
+  password: t.String
 });
 const formOptions = {};
 const Form = t.form.Form;
@@ -28,7 +27,7 @@ export default class FormScreen extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     return (
-      <ScrollView style={styles.profileContainer,{backgroundColor: global.color1, textAlign: 'center'}}>
+      <ScrollView style={styles.profileContainer,{backgroundColor: global.color1, textAlign: 'center', padding: 15}}>
         <Text>{"\n"}</Text>
         <Form
           ref="form"

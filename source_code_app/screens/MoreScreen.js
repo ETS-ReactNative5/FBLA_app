@@ -19,13 +19,11 @@ export default class MoreScreen extends React.Component {
           onPress={() => navigate('License') }
           title="View License Information"
           color="#007ce1"
-          accessibilityLabel="Views License Information on the license information page."
         />
         <Button
           onPress={() => navigate('Settings') }
           title="Settings"
           color="#007ce1"
-          accessibilityLabel="Edit App Settings."
         />
         <Button
           onPress={() => navigate('QA') }
@@ -35,6 +33,11 @@ export default class MoreScreen extends React.Component {
         <Button
           onPress={() => navigate('Officers') }
           title="Local Officer Team"
+          color="#007ce1"
+        />
+        <Button
+          onPress={() => navigate('QR') }
+          title="QR"
           color="#007ce1"
         />
       </ScrollView>

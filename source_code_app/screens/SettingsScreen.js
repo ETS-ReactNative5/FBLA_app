@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import { ExpoConfigView } from '@expo/samples';
-import { Switch, Platform, StatusBar, StyleSheet, View, ScrollView, Text, Button, AsyncStorage, Image, NativeModules } from 'react-native';
+import { Switch, Platform, StatusBar, StyleSheet, View, ScrollView, Text, AsyncStorage, Image, NativeModules } from 'react-native';
 import { Appearance, AppearanceProvider, useColorScheme } from 'react-native-appearance';
+import { Button } from 'react-native-elements';
 const styles = StyleSheet.create(require('../stylesheet'));
 
 export default class MoreScreen extends React.Component {
@@ -29,7 +30,7 @@ export default class MoreScreen extends React.Component {
         <View style={{backgroundColor: global.color3}}>
           <Text>{"\n"}</Text>
           <View style={{flexDirection: "row", justifyContent: 'center', alignItems: 'center' }}>
-            <Text style={styles.left,{color: global.textColor}}>{"    "}Dark Mode {"                                       "}</Text>
+            <Text style={styles.left, styles.infoText, {color: global.textColor}}>{"    "}Dark Mode {"                                       "}</Text>
             <Switch
               onValueChange={() => {
                 this.setState({darkModeState: ((this.state.darkModeState == false) ? true : false)});

@@ -108,4 +108,4 @@ export default class officerScreen extends Component {
 officerScreen.navigationOptions = {
     title: 'Officers',
     header: null,
-  };
+};

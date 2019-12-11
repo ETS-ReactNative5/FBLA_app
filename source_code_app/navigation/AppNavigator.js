@@ -8,6 +8,11 @@ MainTabNavigator.navigationOptions={
   header: null,
 };
 
+import Drawer from './DrawerNavigator';
+Drawer.navigationOptions={
+  header: null,
+};
+
 
 /*====================================================================================*/
 import LicenseScreen from '../screens/LicenseInfo';
@@ -17,6 +22,16 @@ const LicenseStack = createStackNavigator(
   },
 );
 LicenseStack.path = '';
+/*====================================================================================*/
+
+/*====================================================================================*/
+import QR from '../screens/QR';
+const QRStack = createStackNavigator(
+  {
+    QRScanner: QR,
+  },
+);
+QRStack.path = '';
 /*====================================================================================*/
 
 /*====================================================================================*/
@@ -63,11 +78,13 @@ EventsStack.path = '';
 const AppStack = createStackNavigator(
   {
     Main: MainTabNavigator,
+    Drawer: Drawer,
     License: LicenseStack,
     Form: FormStack,
     QA: QAStack,
     EventsCal: EventsStack,
     Officers: OfficerStack,
+    QR: QRStack,
   }
 );
 import LoginScreen from '../screens/LoginScreen';

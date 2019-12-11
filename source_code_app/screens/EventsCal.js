@@ -113,5 +113,5 @@ const styles = StyleSheet.create({
 });
 
 EventsCal.navigationOptions = {
-  title: 'Events Calendar',
+  title: 'Calendar',
 };
