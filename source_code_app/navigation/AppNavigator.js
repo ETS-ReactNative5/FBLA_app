@@ -80,11 +80,22 @@ EventsStack.path = '';
 /*====================================================================================*/
 
 /*====================================================================================*/
+import Attendance from '../screens/Attendance';
+const AttendanceStack = createStackNavigator(
+  {
+    Attendance: Attendance,
+  },
+);
+AttendanceStack.path = '';
+/*====================================================================================*/
+
+/*====================================================================================*/
 const AppStack = createStackNavigator(
   {
     Main: MainTabNavigator,
     License: LicenseStack,
     Form: FormStack,
+    Attendance: AttendanceStack,
     EventForm: EventSignUpStack,
     QA: QAStack,
     EventsCal: EventsStack,

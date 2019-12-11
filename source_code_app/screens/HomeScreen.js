@@ -37,12 +37,16 @@ export default class HomeScreen extends React.Component {
               <Text style={styles.infoText}>Future Business Leaders of America-Phi Beta Lambda, Inc. (FBLA-PBL) is 
               the largest career student business organization in the world. Each year, FBLA-PBL helps over 230,000 
               members prepare for careers in business.
-              {"\n\n"}
+
+              {"\n"}
+              </Text>
+              <Button type='clear' title="FBLA Website" onPress={ ()=>{ Linking.openURL('https://google.com')}} />
+              <Text style={styles.infoText}>
               FBLA-PBL’s National Awards Program, commonly called competitive events, recognizes and rewards excellence 
               in a broad range of business and career-related areas. Through state-based competition at the spring State
                 Leadership Conferences, members compete in events that test their business knowledge and skills. Top winners 
                 in each state are eligible to compete for honors at the National Leadership Conference each summer.
-                {"\n"}
+                {"\n\n"}
               </Text>
               <View style={styles.getStartedContainer,{backgroundColor: global.color1}}> 
               <Text style={styles.getStartedText}>Interested?</Text>
@@ -51,9 +55,9 @@ export default class HomeScreen extends React.Component {
                 title="Sign Up for FBLA"
                 color="#007ce1"
               />
-                <Text style={styles.infoText}>
-                  {"\n"}
-                </Text>
+              <Text style={styles.infoText}>
+                {"\n"}
+              </Text>
 
               </View>
           </View>
@@ -87,7 +91,7 @@ export default class HomeScreen extends React.Component {
             />
             <Text>{"\n\n"}</Text>
             <Button
-              onPress={() => navigate('QR') }
+              onPress={() => navigate('Attendance') }
               size={15}
               title="View Attendence"
               color="#007ce1"

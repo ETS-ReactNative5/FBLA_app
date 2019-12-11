@@ -47,9 +47,14 @@ export default class EventsCal extends Component {
             case "2020-02-06":
               this.makeItem(strTime, "FBLA Disctrict 11 DLC");
               break;
-            case "2019-12-08":
-              this.makeItem(strTime, "asdfsf");
-              this.makeItem(strTime, "asdfsf");
+            case "2020-04-22":
+              this.makeItem(strTime, "FBLA State Conference Day 1");
+              break;
+            case "2020-04-23":
+              this.makeItem(strTime, "FBLA State Conference Day 2");
+              break;
+            case "2020-04-24":
+              this.makeItem(strTime, "FBLA State Conference Day 3");
               break;
 
               
