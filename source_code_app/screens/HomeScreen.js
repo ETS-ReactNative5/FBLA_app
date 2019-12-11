@@ -93,6 +93,10 @@ export default class HomeScreen extends React.Component {
               color="#007ce1"
             />
             </View>
+            <Text>{"\n\n"}</Text>
+            <View style={styles.welcomeContainer}>
+              <Image source={require('../assets/images/QR.png')} style={{height: 200, width: 200}} />
+            </View>
 
         </View>
       );

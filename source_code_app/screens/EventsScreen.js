@@ -22,7 +22,7 @@ export default class EventsScreen extends React.Component {
           <Button
             title="Sign Up For Event"
             onPress={() => navigate("EventForm")}
-            type='outline'
+            type='solid'
           />
         </View>
         <Text>{"\n\n"}</Text>
@@ -31,7 +31,7 @@ export default class EventsScreen extends React.Component {
           <Text style={{textAlign: 'center', fontWeight: 'bold'}}>
               FBLA Events{"\n"} 
           </Text>
-          {"\n\n"}
+          {"\n"}
           3-D Animation{"\n\n"}
           Accounting I{"\n\n"}
           Accounting II{"\n\n"}

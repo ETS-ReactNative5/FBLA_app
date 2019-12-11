@@ -20,6 +20,7 @@ export default class MoreScreen extends React.Component {
 
         <View style={{backgroundColor: global.color2}}>
           <View style={{justifyContent: 'center', alignItems: 'center' }}>
+            <Text>{"\n"}</Text>
             <Image
               style={{width: 50, height: 50}}
               source={require('../assets/images/profile.png')}
@@ -105,7 +106,7 @@ export default class MoreScreen extends React.Component {
           <Text>{"\n"}</Text>
         </View>
 
-        <View style={{backgroundColor: global.color3}}>
+        {/*<View style={{backgroundColor: global.color3}}>
           <Text>{"\n"}</Text>
           <View style={{flexDirection: "row", justifyContent: 'center', alignItems: 'center' }}>
             <Text style={styles.left, styles.infoText, {color: global.textColor}}>{"    "}Dark Mode {"                                       "}</Text>
@@ -120,9 +121,9 @@ export default class MoreScreen extends React.Component {
             />
           </View>
           <Text>{"\n"}</Text>
-        </View>
+        </View>*/}
 
-        <View style={{backgroundColor: global.color2}}>
+        <View style={{backgroundColor: global.color3}}>
           <Text>{"\n"}</Text>
           <View style={{flexDirection: "row", justifyContent: 'center', alignItems: 'center', alignContent: 'center' }}>
             <Button

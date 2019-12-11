@@ -10,8 +10,8 @@ var Person = t.struct({
   event: t.String,
   firstName: t.String,
   lastName: t.String,
-  age: t.Number,
   grade: t.Number,
+  school: t.String,
   email: t.String
 });
 const formOptions = {};
