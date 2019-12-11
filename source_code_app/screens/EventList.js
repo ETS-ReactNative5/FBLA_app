@@ -98,7 +98,7 @@ export default class EventsList extends React.Component {
     }
   }
   
-  EventsList.navigationOptions = ({ navigation }) => {
+  EventsListStack.navigationOptions = ({ navigation }) => {
     return {
       title: 'EventList',
       header: null,
