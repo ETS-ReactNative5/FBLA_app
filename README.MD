@@ -8,7 +8,7 @@ We used a mobile app development framework developed by Facebook called React Na
 
 
 
-To install this app, download the .apk file to an Android device and run. Unfortunately, although this works on iOS, Apple requires a $100 fee annually (Apple Development Program) to compile the app into an iOS standalone package. The Android standalone version (.apk file) works just as well, though, since Google doesn't charge anthing to compile Android apps.
+To install this app, download the .apk file to a compatible Android device (such as the Google Pixel series) and run. Unfortunately, although this works on iOS, Apple requires a $100 fee annually (Apple Development Program) to compile the app into an iOS standalone package. The Android standalone version (.apk file) works just as well, though, since Google doesn't charge anthing to compile Android apps.
 
 
 
